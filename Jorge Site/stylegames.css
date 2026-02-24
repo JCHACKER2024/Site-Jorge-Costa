@@ -1,0 +1,40 @@
+body {
+    background-image: url("IMGS/Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+h2 {
+    font-size: 20px;
+}
+img {
+    display: block;
+    margin: 20px auto;
+    width: 600px;
+    border-radius: 10px;
+}
+ul  {
+    font-size: 20px;
+    list-style-position: inside;
+    list-style-type: decimal;
+    padding: 0;
+}
+.back {
+    display: inline-block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.back:hover {
+    background-color: yellow;
+    color: black;
+}

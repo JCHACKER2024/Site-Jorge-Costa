@@ -1,0 +1,65 @@
+body {
+    background-image: url("IMGS/Background.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+h1 {
+    margin-top: 30px;
+    font-size: 32px;
+}
+.container {
+    width: 70%;
+    margin: 40px auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+}
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+.project {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+.project img {
+    width: 400px;
+    border-radius: 10px;
+}
+.project-info {
+    max-width: 500px;
+}
+.back {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.back:hover {
+    background-color: yellow;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project img {
+        width: 70%;
+    }
+}
