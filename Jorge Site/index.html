@@ -37,6 +37,43 @@
         footer a {
             font-size: 22px;
             }
+        /* Tablet */
+@media (max-width: 1024px) {
+    .project {
+        gap: 25px;
+    }
+
+    .project img {
+        width: 220px;
+    }
+}
+
+/* Telemóvel */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project img {
+        width: 70%;
+    }
+
+    .project-info {
+        max-width: 100%;
+    }
+}
+
+/* Monitores grandes (2K / Ultrawide) */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .project img {
+        width: 320px;
+    }
+}
     </style>
 </head>
 <body>

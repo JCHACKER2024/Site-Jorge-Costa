@@ -85,12 +85,40 @@ ul {
     transform: scale(1.05);
 }
 
-/* Responsividade ajustada para o container */
-@media (max-width: 768px) {
-    .main-container {
-        width: 95%;
-        padding: 20px;
+/* Tablet */
+@media (max-width: 1024px) {
+    .project {
+        gap: 25px;
     }
-    h2 { font-size: 20px; }
-    ul { font-size: 18px; }
+
+    .project img {
+        width: 220px;
+    }
+}
+
+/* Telemóvel */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project img {
+        width: 70%;
+    }
+
+    .project-info {
+        max-width: 100%;
+    }
+}
+
+/* Monitores grandes (2K / Ultrawide) */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .project img {
+        width: 320px;
+    }
 }
