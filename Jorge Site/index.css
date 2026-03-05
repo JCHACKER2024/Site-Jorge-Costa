@@ -1,0 +1,142 @@
+:root {
+    --bg-color: #111;
+    --text-color: white;
+    --card-color: rgba(0, 0, 0, 0.75);
+    --button-bg: rgba(255, 255, 255, 0.2);
+}
+
+.light-mode {
+    --bg-color: #f5f5f5;
+    --text-color: #111;
+    --card-color: rgba(255, 255, 255, 0.9);
+    --button-bg: rgba(0, 0, 0, 0.1);
+}
+body {
+    background-image: url("IMGS/Background.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+    font-family: Georgia, serif;
+    color: var(--text-color);
+    margin: 0;
+    transition: 0.3s;
+}
+
+/* O Container */
+.main-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: var(--card-color);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.profile-img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid var(--text-color);
+}
+
+h1, h2 {
+    color: var(--text-color);
+}
+
+ul {
+    font-size: 22px;
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+/* Estilo para o link de projetos parecer um botão */
+.project-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.project-link:hover {
+    background-color: var(--link-hover);
+    color: black;
+}
+
+/* Botão Voltar */
+.theme-btn {
+    position: fixed;    
+    top: 20px;          
+    right: 20px;        
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    border: 2px solid var(--text-color);
+    background-color: var(--card-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    z-index: 1000;      
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+ /* Tablet */
+@media (max-width: 1024px) {
+    .project {
+        gap: 25px;
+    }
+
+    .project img {
+        width: 220px;
+    }
+}
+
+/* Telemóvel */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project img {
+        width: 70%;
+    }
+
+    .project-info {
+        max-width: 100%;
+    }
+}
+
+/* Monitores grandes (2K / Ultrawide) */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .project img {
+        width: 320px;
+    }
+}

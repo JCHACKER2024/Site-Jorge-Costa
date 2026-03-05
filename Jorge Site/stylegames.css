@@ -1,16 +1,14 @@
 :root {
     --bg-color: #111;
     --text-color: white;
-    /* No modo escuro, o container é preto transparente */
-    --card-color: rgba(0, 0, 0, 0.75); 
+    --card-color: rgba(0, 0, 0, 0.75);
     --button-bg: rgba(255, 255, 255, 0.2);
 }
 
 .light-mode {
     --bg-color: #f5f5f5;
     --text-color: #111;
-    /* No modo claro, o container fica branco quase opaco para leres bem */
-    --card-color: rgba(255, 255, 255, 0.9); 
+    --card-color: rgba(255, 255, 255, 0.9);
     --button-bg: rgba(0, 0, 0, 0.1);
 }
 
@@ -65,24 +63,44 @@ ul {
     display: inline-block; /* Mas mantém-se centrada no container */
 }
 
-/* Botão voltar */
+/* Botão Theme */
+.theme-btn {
+    position: fixed;   
+    top: 20px;         
+    right: 20px;        
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    border: 2px solid var(--text-color);
+    background-color: var(--card-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    z-index: 1000;     
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+/* Botão Voltar */
 .back {
     display: block;          
     width: fit-content;     
-    margin: 40px auto 0 auto; 
+    margin: 40px auto 10px auto; 
     padding: 12px 25px;
     background-color: var(--button-bg);
     border-radius: 10px;
     text-decoration: none;
     color: var(--text-color);
     border: 1px solid var(--text-color);
+    clear: both;             
     transition: 0.3s ease;
-}
-
-.back:hover {
-    background-color: yellow;
-    color: black;
-    transform: scale(1.05);
 }
 
 /* Tablet */

@@ -4,99 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofólio Jorge Costa</title>
-    <style>
-        body {
-            background-image: url("IMGS/Background.gif");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            text-align: center;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            color: white;
-            }
-        h2 {
-            font-size: 22px;
-        }
-        ul  {
-            font-size: 22px;
-            list-style-position: inside;
-            list-style-type: none;
-            padding: 0;
-            }
-        a {
-            color: white;
-            text-decoration: none;
-            }
-
-        a:visited {
-            color: white;
-            }
-        a:hover {
-            color: yellow;
-            }
-        footer a {
-            font-size: 22px;
-            }
-        /* Tablet */
-@media (max-width: 1024px) {
-    .project {
-        gap: 25px;
-    }
-
-    .project img {
-        width: 220px;
-    }
-}
-
-/* Telemóvel */
-@media (max-width: 768px) {
-    .project {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .project img {
-        width: 70%;
-    }
-
-    .project-info {
-        max-width: 100%;
-    }
-}
-
-/* Monitores grandes (2K / Ultrawide) */
-@media (min-width: 1600px) {
-    .container {
-        max-width: 1400px;
-    }
-
-    .project img {
-        width: 320px;
-    }
-}
-    </style>
+    <link rel="stylesheet" href="index.css">    
 </head>
+    <script src="theme.js"></script>
 <body>
-    
-<header>
-    <h1>Game Developer</h1>
-</header>
-<main> 
-    <img src="IMGS/Eu.jpg">
-    <h2>Nome: Jorge Costa</h2>
-    <h2>Sexo: Masculino</h2>
-    <h2>Idade: 25</h2>
-    <h2>Jogos Favoritos</h2>
-    <ul>
-    <li><a href="games/far-cry.html">Far Cry</a></li>
-    <li><a href="games/dying-ligth.html">Dying Light</a></li>
-    <li><a href="games/subnautica.html">Subnautica</a></li>
-    </ul>
-    <h2><a href="projetos.html">Projetos Realizados</a></h2>       
-   
-</main>   
-<footer>
-    <a href="https://www.facebook.com/profile.php?id=100052424652393">Contactos</a>
-</footer>   
+    <main class="main-container">
+        <header>
+            <h1>Game Developer</h1>
+        </header>
+
+        <img src="IMGS/Eu.jpg" class="profile-img">
+        
+        <h2>Nome: Jorge Costa</h2>
+        <h2>Género: Masculino</h2>
+        <h2>Idade: 25</h2>
+
+        <h2>Jogos Favoritos</h2>
+        <ul>
+            <li><a href="games/far-cry.html">Far Cry</a></li>
+            <li><a href="games/dying-ligth.html">Dying Light</a></li>
+            <li><a href="games/subnautica.html">Subnautica</a></li>
+        </ul>
+
+        <h2><a class="project-link" href="projetos.html">Projetos Realizados</a></h2> 
+        
+        <footer>
+            <a href="https://www.facebook.com/profile.php?id=100052424652393">Contactos</a>
+        </footer>
+        <button class="theme-btn" onclick="toggleTheme()">🌙 / ☀️</button>
+    </main>
 </body>
 </html>
