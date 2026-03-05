@@ -59,7 +59,7 @@ a {
 }
 
 a:hover {
-    color: var(--link-hover);
+    color: yellow;
 }
 
 /* Estilo para o link de projetos parecer um botão */
