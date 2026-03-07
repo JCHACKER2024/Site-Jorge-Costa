@@ -1,8 +1,11 @@
+/* 1. VARIÁVEIS GLOBAIS - Sincronizadas com o Index */
 :root {
     --bg-color: #111;
     --text-color: white;
     --card-color: rgba(0, 0, 0, 0.75);
     --button-bg: rgba(255, 255, 255, 0.2);
+    --hover-bg: white;
+    --hover-text: black;
 }
 
 .light-mode {
@@ -10,22 +13,25 @@
     --text-color: #111;
     --card-color: rgba(255, 255, 255, 0.9);
     --button-bg: rgba(0, 0, 0, 0.1);
+    --hover-bg: black;
+    --hover-text: white;
 }
 
+/* 2. ESTILO DO CORPO */
 body {
     background-image: url("IMGS/Background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Mantém o fundo parado ao fazer scroll */
+    background-attachment: fixed;
     background-position: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     margin: 0;
     color: var(--text-color);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Container que protege o conteúdo */
+/* 3. CONTAINER DE CONTEÚDO */
 .main-container {
     width: 90%;
     max-width: 1000px;
@@ -33,18 +39,19 @@ body {
     padding: 40px;
     background-color: var(--card-color);
     border-radius: 20px;
-    
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Dá profundidade */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-sizing: border-box; /* Garante que o padding não quebra a largura */
+    transition: 0.3s ease;
 }
 
-/* Título */
-h2 {
-    font-size: 28px; /* Aumentei um pouco para destaque */
+/* 4. TIPOGRAFIA E IMAGENS */
+h1, h2 {
     color: var(--text-color);
+    transition: 0.3s;
 }
 
-/* Imagem adaptável */
+h2 { font-size: 28px; }
+
 img {
     display: block;
     margin: 30px auto;
@@ -53,18 +60,17 @@ img {
     border-radius: 10px;
 }
 
-/* Lista */
 ul {
     font-size: 20px;
     list-style-position: inside;
     list-style-type: decimal;
     padding: 0;
     color: var(--text-color);
-    text-align: left; /* Listas costumam ler-se melhor à esquerda */
-    display: inline-block; /* Mas mantém-se centrada no container */
+    text-align: left; 
+    display: inline-block; 
 }
 
-/* Botão Theme */
+/* 5. BOTÕES (Theme e Voltar) */
 .theme-btn {
     position: fixed;   
     top: 20px;         
@@ -89,7 +95,7 @@ ul {
     background-color: var(--text-color);
     color: var(--bg-color);
 }
-/* Botão Voltar */
+
 .back {
     display: block;          
     width: fit-content;     
@@ -100,49 +106,23 @@ ul {
     text-decoration: none;
     color: var(--text-color);
     border: 1px solid var(--text-color);
-    clear: both;             
     transition: 0.3s ease;
 }
-.back:hover{
-background-color: var(--text-color);
-color: var(--bg-color);
-transform: scale(1.05);
+
+.back:hover {
+    background-color: var(--hover-bg);
+    color: var(--hover-text);
+    transform: scale(1.05);
 }
 
-/* Tablet */
-@media (max-width: 1024px) {
-    .project {
-        gap: 25px;
-    }
-
-    .project img {
-        width: 220px;
-    }
-}
-
-/* Telemóvel */
+/* 6. RESPONSIVIDADE */
 @media (max-width: 768px) {
-    .project {
-        flex-direction: column;
-        text-align: center;
+    .main-container {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
     }
 
-    .project img {
-        width: 70%;
-    }
-
-    .project-info {
-        max-width: 100%;
-    }
-}
-
-/* Monitores grandes (2K / Ultrawide) */
-@media (min-width: 1600px) {
-    .container {
-        max-width: 1400px;
-    }
-
-    .project img {
-        width: 320px;
-    }
+    h2 { font-size: 22px; }
+    ul { font-size: 18px; }
 }

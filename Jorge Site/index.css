@@ -1,22 +1,25 @@
+/* 1. VARIÁVEIS GLOBAIS - Mantém a consistência em todo o site */
 :root {
     --bg-color: black;
     --text-color: white;
     --card-color: rgba(0, 0, 0, 0.75);
-    --button-bg: rgba(255, 255, 255, 0.2);
+    --btn-theme-border: white;
     --project-btn-bg: white;
     --project-btn-text: black;
+    --hover-color: #d35400;
 }
-
 
 .light-mode {
     --bg-color: white;
     --text-color: black;
     --card-color: rgba(255, 255, 255, 0.9);
-    --button-bg: rgba(0, 0, 0, 0.1);
-     --project-btn-bg: black;
+    --btn-theme-border: black;
+    --project-btn-bg: black;
     --project-btn-text: white;
+    --hover-color: #d35400; 
 }
 
+/* 2. ESTILO GERAL */
 body {
     background-image: url("IMGS/Background.gif");
     background-size: cover;
@@ -27,10 +30,10 @@ body {
     font-family: Georgia, serif;
     color: var(--text-color);
     margin: 0;
-    transition: 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* O Container */
+/* 3. CONTAINER PRINCIPAL (Centralizado e adaptável) */
 .main-container {
     width: 90%;
     max-width: 800px;
@@ -42,8 +45,11 @@ body {
     transition: 0.3s;
 }
 
+/* 4. ELEMENTOS DO PERFIL */
 .profile-img {
     width: 200px;
+    height: 200px;
+    object-fit: cover; 
     border-radius: 50%;
     margin-bottom: 20px;
     border: 3px solid var(--text-color);
@@ -51,6 +57,7 @@ body {
 
 h1, h2 {
     color: var(--text-color);
+    margin-bottom: 15px;
 }
 
 ul {
@@ -59,6 +66,11 @@ ul {
     padding: 0;
 }
 
+li {
+    margin: 10px 0;
+}
+
+/* 5. LINKS E BOTÕES */
 a {
     color: var(--text-color);
     text-decoration: underline;
@@ -66,27 +78,30 @@ a {
 }
 
 a:hover {
-    color: yellow;
+    color: var(--hover-color);
 }
 
-/* Botão Projecto */
 .project-link {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-top: 5px;     
+    padding: 15px 35px;    
     background-color: var(--project-btn-bg);
     color: var(--project-btn-text);
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 12px;   
+    font-size: 24px;       
+    font-weight: bold;     
     transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
 }
 
 .project-link:hover {
-    transform: scale(1.05);
-    opacity: 0.8;
-    color: var(--project-btn-text);
+    transform: scale(1.1); 
+    opacity: 0.9;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
-/* Botão Theme */
+
+/* 6. BOTÃO DE TEMA (FIXO) */
 .theme-btn {
     position: fixed;   
     top: 20px;         
@@ -94,7 +109,7 @@ a:hover {
     width: 50px;
     height: 50px;
     border-radius: 50%; 
-    border: 2px solid var(--text-color);
+    border: 2px solid var(--btn-theme-border);
     background-color: var(--card-color);
     color: var(--text-color);
     cursor: pointer;
@@ -111,40 +126,20 @@ a:hover {
     background-color: var(--text-color);
     color: var(--bg-color);
 }
- /* Tablet */
-@media (max-width: 1024px) {
-    .project {
-        gap: 25px;
-    }
 
-    .project img {
-        width: 220px;
-    }
-}
-
-/* Telemóvel */
+/* 7. RESPONSIVIDADE (Apenas o necessário para o Index) */
 @media (max-width: 768px) {
-    .project {
-        flex-direction: column;
-        text-align: center;
+    .main-container {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
     }
 
-    .project img {
-        width: 70%;
-    }
-
-    .project-info {
-        max-width: 100%;
-    }
-}
-
-/* Monitores grandes (2K / Ultrawide) */
-@media (min-width: 1600px) {
-    .container {
-        max-width: 1400px;
-    }
-
-    .project img {
-        width: 320px;
-    }
+    h1 { font-size: 28px; }
+    ul { font-size: 18px; }
 }
