@@ -28,7 +28,7 @@ h1 {
     font-size: 36px;
 }
 
-/* Container */
+/* Container central adaptável */
 .container {
     width: 90%;
     max-width: 1200px;   /* Limite ideal para 1920x1080 */
@@ -36,7 +36,6 @@ h1 {
     background-color: var(--card-color);
     padding: 40px;
     border-radius: 15px;
-    box-sizing: border-box;
 }
 
 /* Lista */
@@ -109,6 +108,11 @@ h1 {
     border: 1px solid var(--text-color);
     clear: both;            
     transition: 0.3s ease;
+}
+.back:hover{
+background-color: var(--text-color);
+color: var(--bg-color);
+transform: scale(1.05);
 }
 
 /* Tablet */
