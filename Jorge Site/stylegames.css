@@ -1,4 +1,4 @@
-/* 1. VARIÁVEIS GLOBAIS - Sincronizadas com o Index */
+/* 1. VARIÁVEIS GLOBAIS*/
 :root {
     --bg-color: #111;
     --text-color: white;
@@ -40,7 +40,7 @@ body {
     background-color: var(--card-color);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    box-sizing: border-box; /* Garante que o padding não quebra a largura */
+    box-sizing: border-box; 
     transition: 0.3s ease;
 }
 

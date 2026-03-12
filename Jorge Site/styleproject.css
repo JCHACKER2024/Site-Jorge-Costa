@@ -1,4 +1,4 @@
-/* 1. VARIÁVEIS GLOBAIS - Sincronizadas com o resto do site */
+/* 1. VARIÁVEIS GLOBAIS */
 :root {
     --bg-color: #111;
     --text-color: white;
@@ -37,7 +37,7 @@ h1 {
     color: var(--text-color);
 }
 
-/* 3. CONTAINER DE PROJETOS */
+/* 3. CONTAINER */
 .container {
     width: 90%;
     max-width: 1200px;

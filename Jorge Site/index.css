@@ -1,4 +1,4 @@
-/* 1. VARIÁVEIS GLOBAIS - Mantém a consistência em todo o site */
+/* 1. VARIÁVEIS GLOBAIS */
 :root {
     --bg-color: black;
     --text-color: white;
@@ -33,7 +33,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* 3. CONTAINER PRINCIPAL (Centralizado e adaptável) */
+/* 3. CONTAINER PRINCIPAL */
 .main-container {
     width: 90%;
     max-width: 800px;
