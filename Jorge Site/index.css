@@ -101,7 +101,7 @@ a:hover {
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
-/* 6. BOTÃO DE TEMA (FIXO) */
+/* 6. BOTÃO DE TEMA */
 .theme-btn {
     position: fixed;   
     top: 20px;         
@@ -127,7 +127,7 @@ a:hover {
     color: var(--bg-color);
 }
 
-/* 7. RESPONSIVIDADE (Apenas o necessário para o Index) */
+/* 7. RESPONSIVIDADE */
 @media (max-width: 768px) {
     .main-container {
         width: 95%;
