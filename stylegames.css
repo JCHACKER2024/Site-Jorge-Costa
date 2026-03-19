@@ -19,7 +19,7 @@
 
 /* 2. ESTILO DO CORPO */
 body {
-    background-image: url("IMGS/Background.jpg");
+    background-image: url("IMGS/UI/Background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
