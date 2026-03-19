@@ -1,0 +1,128 @@
+/* 1. VARIÁVEIS GLOBAIS*/
+:root {
+    --bg-color: #111;
+    --text-color: white;
+    --card-color: rgba(0, 0, 0, 0.75);
+    --button-bg: rgba(255, 255, 255, 0.2);
+    --hover-bg: white;
+    --hover-text: black;
+}
+
+.light-mode {
+    --bg-color: #f5f5f5;
+    --text-color: #111;
+    --card-color: rgba(255, 255, 255, 0.9);
+    --button-bg: rgba(0, 0, 0, 0.1);
+    --hover-bg: black;
+    --hover-text: white;
+}
+
+/* 2. ESTILO DO CORPO */
+body {
+    background-image: url("IMGS/Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 0;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 3. CONTAINER DE CONTEÚDO */
+.main-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: var(--card-color);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-sizing: border-box; 
+    transition: 0.3s ease;
+}
+
+/* 4. TIPOGRAFIA E IMAGENS */
+h1, h2 {
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+h2 { font-size: 28px; }
+
+img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;          
+    max-width: 800px;    
+    border-radius: 10px;
+}
+
+ul {
+    font-size: 20px;
+    list-style-position: inside;
+    list-style-type: decimal;
+    padding: 0;
+    color: var(--text-color);
+    text-align: left; 
+    display: inline-block; 
+}
+
+/* 5. BOTÕES (Theme e Voltar) */
+.theme-btn {
+    position: fixed;   
+    top: 20px;         
+    right: 20px;        
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    border: 2px solid var(--text-color);
+    background-color: var(--card-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    z-index: 1000;     
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.back {
+    display: block;          
+    width: fit-content;     
+    margin: 40px auto 10px auto; 
+    padding: 12px 25px;
+    background-color: var(--button-bg);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    transition: 0.3s ease;
+}
+
+.back:hover {
+    background-color: var(--hover-bg);
+    color: var(--hover-text);
+    transform: scale(1.05);
+}
+
+/* 6. RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .main-container {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    h2 { font-size: 22px; }
+    ul { font-size: 18px; }
+}
