@@ -129,6 +129,14 @@ h1 {
     transform: scale(1.05);
 }
 
+.about-img {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid var(--text-color);
+}
+
 /* 5. RESPONSIVIDADE */
 
 /* Tablets */
