@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subnautica</title>
-    <link rel="stylesheet" href="/CSS/stylegames.css">
-    <script src="/JavaScripts/theme.js"></script>
+    <link rel="stylesheet" href="../CSS/stylegames.css">
+    <script src="../JavaScripts/theme.js"></script>
 </head>
 <body>
     <button class="theme-btn" onclick="toggleTheme()">🌙 / ☀️</button>
@@ -27,7 +27,18 @@
             <li>Os veículos são a melhor parte do jogo.</li>
         </ul>
 
+        <!-- BOTÃO STEAM DO JOGO -->
+        <a href="https://store.steampowered.com/app/264710/Subnautica/" target="_blank" class="buy-btn">
+            🛒 Comprar na Steam
+        </a>
+
+        <!-- API SECTION – Jogos semelhantes -->
+        <h2>🎮 Jogos semelhantes</h2>
+        <div id="games-container">A carregar jogos...</div>
+
         <a class="back" href="../index.html">⬅ Voltar</a>
     </main>
+
+    <script src="../JavaScripts/games.js"></script>
 </body>
 </html>
