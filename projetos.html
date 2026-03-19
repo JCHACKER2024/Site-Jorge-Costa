@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos - Jorge Costa</title>
-    <link rel="stylesheet" href="styleproject.css">
-    <script src="theme.js"></script>
+    <link rel="stylesheet" href="CSS/styleproject.css">
 </head>
 <body>    
     <button class="theme-btn" onclick="toggleTheme()">🌙 / ☀️</button>
@@ -16,41 +15,53 @@
         </header>
 
         <ul class="project-list">
-            <li class="project">
+            <!-- Spring Up -->
+            <li class="project" data-project="SpringUp">
                 <img src="IMGS/SpringUp/SpringUp1.png" alt="Spring Up Gameplay">
                 <div class="project-info">
-                    <h2>Spring Up</h2>
-                    <p><strong>Género:</strong> 2D Infinite Vertical Sidescroller</p>
-                    <p><strong>Descrição:</strong> Jogo onde o jogador controla uma mola viva que salta infinitamente por plataformas, acumulando pontos.</p>
-                    <p><strong>Função:</strong> Artista</p>
-                    <p><strong>Contribuições:</strong> Criação das plataformas, anilhas (sistema de pontuação) e power-up tipo trampolim.</p>
+                    <h2 class="project-title">Spring Up</h2>
+                    <div class="details">
+                        <p><strong>Género:</strong> 2D Infinite Vertical Sidescroller</p>
+                        <p><strong>Descrição:</strong> Jogo onde o jogador controla uma mola viva que salta infinitamente por plataformas, acumulando pontos.</p>
+                        <p><strong>Função:</strong> Artista</p>
+                        <p><strong>Contribuições:</strong> Criação das plataformas, anilhas (sistema de pontuação) e power-up tipo trampolim.</p>
+                    </div>
                 </div>
             </li>
 
-            <li class="project">
+            <!-- Color Morph -->
+            <li class="project" data-project="ColorMorph">
                 <img src="IMGS/ColorMorph/ColorMorph1.png" alt="Color Morph Gameplay">
                 <div class="project-info">
-                    <h2>Color Morph</h2>
-                    <p><strong>Género:</strong> 2D Memory Sidescroller</p>
-                    <p><strong>Descrição:</strong> Jogo focado em memória e reflexos rápidos, onde o jogador deve identificar rapidamente a forma correta.</p>
-                    <p><strong>Função:</strong> Artista</p>
-                    <p><strong>Contribuições:</strong> Desenvolvimento completo da interface (UI).</p>
+                    <h2 class="project-title">Color Morph</h2>
+                    <div class="details">
+                        <p><strong>Género:</strong> 2D Memory Sidescroller</p>
+                        <p><strong>Descrição:</strong> Jogo focado em memória e reflexos rápidos, onde o jogador deve identificar rapidamente a forma correta.</p>
+                        <p><strong>Função:</strong> Artista</p>
+                        <p><strong>Contribuições:</strong> Desenvolvimento completo da interface (UI).</p>
+                    </div>
                 </div>
             </li>
 
-            <li class="project">
+            <!-- Cursed Revenge -->
+            <li class="project" data-project="CursedByRevenge">
                 <img src="IMGS/CursedByRevenge/CursedByRevenge1.png" alt="Cursed Revenge Gameplay">
                 <div class="project-info">
-                    <h2>Cursed Revenge</h2>
-                    <p><strong>Género:</strong> 2D Top-Down Pixel Art</p>
-                    <p><strong>Descrição:</strong> Jogo narrativo onde controlamos uma samurai em busca de vingança contra um demónio.</p>
-                    <p><strong>Função:</strong> Artista</p>
-                    <p><strong>Contribuições:</strong> Level design, decoração do mapa e criação de vários assets.</p>
+                    <h2 class="project-title">Cursed Revenge</h2>
+                    <div class="details">
+                        <p><strong>Género:</strong> 2D Top-Down Pixel Art</p>
+                        <p><strong>Descrição:</strong> Jogo narrativo onde controlamos uma samurai em busca de vingança contra um demónio.</p>
+                        <p><strong>Função:</strong> Artista</p>
+                        <p><strong>Contribuições:</strong> Level design, decoração do mapa e criação de vários assets.</p>
+                    </div>
                 </div>
             </li>
         </ul>
 
         <a class="back" href="index.html">⬅ Voltar</a>
     </main>
+
+    <script src="JavaScripts/theme.js"></script>
+    <script src="JavaScripts/interactions.js"></script>
 </body>
 </html>

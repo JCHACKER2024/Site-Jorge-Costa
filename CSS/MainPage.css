@@ -21,7 +21,7 @@
 
 /* 2. ESTILO GERAL */
 body {
-    background-image: url("IMGS/UI/Background.gif");
+    background-image: url("../IMGS/UI/Background.gif");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

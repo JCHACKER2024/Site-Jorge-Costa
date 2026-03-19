@@ -19,7 +19,7 @@
 
 /* 2. ESTILO GERAL */
 body {
-    background-image: url("IMGS/UI/Background.gif");
+    background-image: url("../IMGS/UI/Background.gif");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -135,6 +135,35 @@ h1 {
     width: 200px;
     border-radius: 50%;
     border: 3px solid var(--text-color);
+}
+
+/* Interatividade detalhes */
+.details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.details.show {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* Hover no título do projeto */
+.project-title {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.project-title:hover {
+    color: #ffcc00;
+}
+
+/* Pequena melhoria UX no li todo */
+.project:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
 }
 
 /* 5. RESPONSIVIDADE */
