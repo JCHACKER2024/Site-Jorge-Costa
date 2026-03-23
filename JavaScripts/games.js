@@ -13,20 +13,20 @@ async function loadGames() {
         if (title.includes("far cry")) {
             games = [
                 { name: "Crysis", image: "../IMGS/Games/crysis.jpg", genre: "FPS", link: "https://store.steampowered.com/app/1715130/Crysis_Remastered/" },
-                { name: "Metro Exodus", image: "../IMGS/Games/metro.jpg", genre: "Shooter", link: "https://store.steampowered.com/app/412020/Metro_Exodus/" },
-                { name: "Just Cause 3", image: "../IMGS/Games/justcause.jpg", genre: "Open World", link: "https://store.steampowered.com/app/225540/Just_Cause_3/" }
+                { name: "Metro Exodus", image: "../IMGS/Games/Metro Exodus.avif", genre: "Shooter", link: "https://store.steampowered.com/app/412020/Metro_Exodus/" },
+                { name: "Just Cause 3", image: "../IMGS/Games/Just Cause 3.jpg", genre: "Open World", link: "https://store.steampowered.com/app/225540/Just_Cause_3/" }
             ];
         } else if (title.includes("dying light")) {
             games = [
-                { name: "Dead Island 2", image: "../IMGS/Games/deadisland2.jpg", genre: "Zombie", link: "https://store.steampowered.com/app/934700/Dead_Island_2/" },
-                { name: "State of Decay", image: "../IMGS/Games/state.jpg", genre: "Survival", link: "https://store.steampowered.com/app/329430/State_of_Decay_YOSE/" },
-                { name: "The Forest", image: "../IMGS/Games/forest.jpg", genre: "Survival", link: "https://store.steampowered.com/app/242760/The_Forest/" }
+                { name: "Dead Island 2", image: "../IMGS/Games/Dead Island 2.jpg", genre: "Zombie", link: "https://store.steampowered.com/app/934700/Dead_Island_2/" },
+                { name: "State of Decay", image: "../IMGS/Games/State of Decay.jpg", genre: "Survival", link: "https://store.steampowered.com/app/329430/State_of_Decay_YOSE/" },
+                { name: "The Forest", image: "../IMGS/Games/The Forest.jpg", genre: "Survival", link: "https://store.steampowered.com/app/242760/The_Forest/" }
             ];
         } else if (title.includes("subnautica")) {
             games = [
-                { name: "No Man's Sky", image: "../IMGS/Games/nomans.jpg", genre: "Exploration", link: "https://store.steampowered.com/app/275850/No_Mans_Sky/" },
-                { name: "Raft", image: "../IMGS/Games/raft.jpg", genre: "Survival", link: "https://store.steampowered.com/app/648800/Raft/" },
-                { name: "The Forest", image: "../IMGS/Games/forest.jpg", genre: "Survival", link: "https://store.steampowered.com/app/242760/The_Forest/" }
+                { name: "No Man's Sky", image: "../IMGS/Games/No Man's Sky.jpg", genre: "Exploration", link: "https://store.steampowered.com/app/275850/No_Mans_Sky/" },
+                { name: "Raft", image: "../IMGS/Games/Raft.jpg", genre: "Survival", link: "https://store.steampowered.com/app/648800/Raft/" },
+                { name: "The Forest", image: "../IMGS/Games/The Forest.jpg", genre: "Survival", link: "https://store.steampowered.com/app/242760/The_Forest/" }
             ];
         }
 
