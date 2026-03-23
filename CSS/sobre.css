@@ -1,0 +1,161 @@
+/* 1. VARIÁVEIS */
+:root {
+    --bg-color: #111;
+    --text-color: white;
+    --card-color: rgba(0, 0, 0, 0.75);
+    --button-bg: rgba(255, 255, 255, 0.2);
+    --hover-bg: white;
+    --hover-text: black;
+}
+
+.light-mode {
+    --bg-color: #f5f5f5;
+    --text-color: #111;
+    --card-color: rgba(255, 255, 255, 0.9);
+    --button-bg: rgba(0, 0, 0, 0.1);
+    --hover-bg: black;
+    --hover-text: white;
+}
+
+/* 2. BODY */
+body {
+    background-image: url("../IMGS/UI/Background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    text-align: center;
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+
+/* 3. CONTAINER */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: var(--card-color);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* 4. IMAGEM */
+.about-img {
+    width: 180px;
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 3px solid var(--text-color);
+    transition: 0.3s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* 5. CARDS */
+.about-card {
+    background-color: var(--card-color);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 15px;
+    line-height: 1.6;
+    transition: 0.3s ease;
+}
+
+.about-card:hover {
+    transform: scale(1.02);
+}
+
+/* 6. SKILLS */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.skills-list li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* 7. SOCIALS */
+.socials {
+    margin: 20px 0;
+}
+
+.socials a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    border: 1px solid var(--text-color);
+    transition: 0.3s ease;
+}
+
+.socials a:hover {
+    background-color: var(--hover-bg);
+    color: var(--hover-text);
+    transform: scale(1.05);
+}
+
+/* 8. BOTÕES */
+.theme-btn {
+    position: fixed;   
+    top: 20px;         
+    right: 20px;        
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    border: 2px solid var(--text-color);
+    background-color: var(--card-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 20px; /* IMPORTANTE */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.back {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    transition: 0.3s ease;
+}
+
+.back:hover {
+    background-color: var(--hover-bg);
+    color: var(--hover-text);
+    transform: scale(1.05);
+}
+
+/* 9. RESPONSIVO */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .about-img {
+        width: 140px;
+    }
+}
