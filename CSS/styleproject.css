@@ -136,7 +136,7 @@ h1 {
     border: 3px solid var(--text-color);
 }
 
-/* Interatividade detalhes */
+/* DETALHES (SHOW/HIDE) */
 .details {
     max-height: 0;
     opacity: 0;
@@ -149,7 +149,7 @@ h1 {
     opacity: 1;
 }
 
-/* Hover no título do projeto */
+/* TITULO PROJETO */
 .project-title {
     cursor: pointer;
     transition: color 0.3s ease;
@@ -159,10 +159,21 @@ h1 {
     color: #d35400;
 }
 
-/* Pequena melhoria UX no li todo */
 .project:hover {
     transform: scale(1.02);
     transition: transform 0.3s ease;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slider img {
+    width: 280px;
+    height: auto; 
+    border-radius: 10px;
 }
 
 /* 5. RESPONSIVIDADE */
