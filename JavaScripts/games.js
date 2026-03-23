@@ -18,7 +18,7 @@ async function loadGames() {
             ];
         } else if (title.includes("dying light")) {
             games = [
-                { name: "Dead Island", image: "../IMGS/Games/deadisland.jpg", genre: "Zombie", link: "https://store.steampowered.com/app/383150/Dead_Island_Definitive_Edition/" },
+                { name: "Dead Island 2", image: "../IMGS/Games/deadisland2.jpg", genre: "Zombie", link: "https://store.steampowered.com/app/934700/Dead_Island_2/" },
                 { name: "State of Decay", image: "../IMGS/Games/state.jpg", genre: "Survival", link: "https://store.steampowered.com/app/329430/State_of_Decay_YOSE/" },
                 { name: "The Forest", image: "../IMGS/Games/forest.jpg", genre: "Survival", link: "https://store.steampowered.com/app/242760/The_Forest/" }
             ];

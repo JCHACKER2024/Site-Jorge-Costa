@@ -111,10 +111,9 @@ h1 {
 }
 
 .back {
-    display: block;          
-    width: fit-content;     
-    margin: 40px auto 10px auto; 
-    padding: 12px 25px;
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
     background-color: var(--button-bg);
     border-radius: 10px;
     text-decoration: none;
