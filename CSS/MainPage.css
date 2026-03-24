@@ -177,6 +177,7 @@ footer a:hover {
     animation: fadeIn 0.8s ease;
 }
 
+/* ANIMAÇÃO FADE IN */
 @keyframes fadeIn {
     from {
         opacity: 0;
