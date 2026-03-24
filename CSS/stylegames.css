@@ -226,9 +226,13 @@ ul {
 }
 
 .game-card img {
-    height: 200px;
-    object-fit: cover; 
+    width: 100%;
+    height: 280px;     
+    object-fit: contain; 
+    background-color: rgba(0, 0, 0, 0.2); 
     margin: 0 0 15px 0;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 /* ANIMAÇÃO FADE IN */

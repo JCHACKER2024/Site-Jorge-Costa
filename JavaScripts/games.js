@@ -11,7 +11,7 @@ async function loadGames() {
 
         if (title.includes("far cry")) {
             games = [
-                { name: "Crysis", image: "../IMGS/Games/crysis.jpg", genre: "FPS", link: "https://store.steampowered.com/app/1715130/Crysis_Remastered/" },
+                { name: "Crysis", image: "../IMGS/Games/Crysis.jpg", genre: "FPS", link: "https://store.steampowered.com/app/1715130/Crysis_Remastered/" },
                 { name: "Metro Exodus", image: "../IMGS/Games/Metro Exodus.avif", genre: "Shooter", link: "https://store.steampowered.com/app/412020/Metro_Exodus/" },
                 { name: "Just Cause 3", image: "../IMGS/Games/Just Cause 3.jpg", genre: "Open World", link: "https://store.steampowered.com/app/225540/Just_Cause_3/" }
             ];
