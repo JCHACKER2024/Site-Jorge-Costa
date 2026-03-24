@@ -1,4 +1,4 @@
-/* 1. VARIÁVEIS GLOBAIS */
+/* VARIÁVEIS GLOBAIS */
 :root {
     --bg-color: #111;
     --text-color: white;
@@ -17,7 +17,7 @@
     --hover-text: white;
 }
 
-/* 2. ESTILO GERAL */
+/* ESTILO GERAL */
 body {
     background-image: url("../IMGS/UI/Background.jpg");
     background-size: cover;
@@ -37,7 +37,7 @@ h1 {
     color: var(--text-color);
 }
 
-/* 3. CONTAINER */
+/* CONTAINER PRINCIPAL */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -82,7 +82,7 @@ h1 {
     color: var(--text-color);
 }
 
-/* 4. BOTÕES (Theme e Voltar) */
+/* BOTÕES */
 .theme-btn {
     position: fixed;    
     top: 20px;          
@@ -162,7 +162,7 @@ h1 {
     transition: transform 0.3s ease;
 }
 
-/* DETALHES SLIDER */
+/* SLIDER */
 .slider {
     width: 300px;
     height: 200px;
@@ -202,7 +202,7 @@ h1 {
     background-color: rgba(0,0,0,0.8);
 }
 
-/* 5. RESPONSIVIDADE */
+/* RESPONSIVIDADE */
 
 /* Tablets */
 @media (max-width: 1024px) {

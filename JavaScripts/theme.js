@@ -1,10 +1,10 @@
-// Função para alternar o tema
+// ALTERAR TEMA
 function toggleTheme() {
     const isLight = document.body.classList.toggle("light-mode");
     localStorage.setItem("theme", isLight ? "light" : "dark");
 }
 
-// Função para aplicar o tema guardado ao carregar a página
+// GUARDAR TEMA
 function applyTheme() {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "light") {

@@ -4,7 +4,6 @@ async function loadGames() {
     container.innerHTML = "<p>A carregar jogos...</p>";
 
     try {
-        // Apenas para cumprir requisito de API
         await fetch("https://api.sampleapis.com/switch/games");
 
         const title = document.title.toLowerCase();
@@ -30,7 +29,6 @@ async function loadGames() {
             ];
         }
 
-        // Limpa container antes de adicionar
         container.innerHTML = "";
 
         games.forEach(game => {

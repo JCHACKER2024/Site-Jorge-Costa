@@ -1,4 +1,4 @@
-/* 1. VARIÁVEIS */
+/* VARIÁVEIS */
 :root {
     --bg-color: #111;
     --text-color: white;
@@ -17,7 +17,7 @@
     --hover-text: white;
 }
 
-/* 2. BODY */
+/* ESTILO GERAL */
 body {
     background-image: url("../IMGS/UI/Background.jpg");
     background-size: cover;
@@ -30,7 +30,7 @@ body {
     transition: 0.3s ease;
 }
 
-/* 3. CONTAINER */
+/* CONTAINER PRINCIPAL */
 .container {
     width: 90%;
     max-width: 900px;
@@ -41,7 +41,6 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* 4. IMAGEM */
 .about-img {
     width: 180px;
     border-radius: 50%;
@@ -54,7 +53,7 @@ body {
     transform: scale(1.05) rotate(2deg);
 }
 
-/* 5. CARDS */
+/* CARDS */
 .about-card {
     background-color: var(--card-color);
     padding: 20px;
@@ -68,7 +67,7 @@ body {
     transform: scale(1.02);
 }
 
-/* 6. SKILLS */
+/* SKILLS */
 .skills-list {
     list-style: none;
     padding: 0;
@@ -82,7 +81,7 @@ body {
     font-size: 18px;
 }
 
-/* 7. SOCIALS */
+/* SOCIALS */
 .socials {
     margin: 20px 0;
 }
@@ -105,7 +104,7 @@ body {
     transform: scale(1.05);
 }
 
-/* 8. BOTÕES */
+/* BOTÕES */
 .theme-btn {
     position: fixed;   
     top: 20px;         
@@ -149,7 +148,7 @@ body {
     transform: scale(1.05);
 }
 
-/* 9. RESPONSIVO */
+/* RESPONSIVO */
 @media (max-width: 768px) {
     .container {
         padding: 20px;

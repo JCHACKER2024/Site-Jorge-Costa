@@ -1,4 +1,4 @@
-/* 1. VARIÁVEIS GLOBAIS */
+/* VARIÁVEIS GLOBAIS */
 :root {
     --bg-color: #111;
     --text-color: white;
@@ -17,7 +17,7 @@
     --hover-text: white;
 }
 
-/* 2. ESTILO DO CORPO */
+/* ESTILO GERAL */
 body {
     background-image: url("../IMGS/UI/Background.jpg");
     background-size: cover;
@@ -31,7 +31,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* 3. CONTAINER DE CONTEÚDO */
+/* CONTAINER PRINCIPAL */
 .main-container {
     width: 90%;
     max-width: 1000px;
@@ -44,7 +44,6 @@ body {
     transition: 0.3s ease;
 }
 
-/* 4. TIPOGRAFIA E IMAGENS */
 h1, h2 {
     color: var(--text-color);
     transition: 0.3s;
@@ -70,7 +69,7 @@ ul {
     display: inline-block; 
 }
 
-/* 5. BOTÕES (Theme, Voltar e Steam) */
+/* BOTÕES */
 .theme-btn {
     position: fixed;   
     top: 20px;         
@@ -114,7 +113,6 @@ ul {
     transform: scale(1.05);
 }
 
-/* BOTÃO STEAM */
 .buy-btn {
     display: block; 
     text-align: center;
@@ -135,7 +133,7 @@ ul {
     transform: scale(1.05);
 }
 
-/* 6. CONTAINER DOS JOGOS */
+/* CONTAINER DOS JOGOS */
 #games-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -143,7 +141,7 @@ ul {
     margin-top: 20px;
 }
 
-/* 7. CARD DOS JOGOS */
+/* CARD DOS JOGOS */
 .game-card {
     background-color: var(--card-color);
     padding: 10px;
@@ -180,7 +178,7 @@ ul {
     transform: scale(1.05);
 }
 
-/* 7. RESPONSIVIDADE */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
     .main-container {
         width: 95%;
