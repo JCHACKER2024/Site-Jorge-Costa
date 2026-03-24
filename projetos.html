@@ -6,6 +6,7 @@
     <title>Projetos - Jorge Costa</title>
     <link rel="stylesheet" href="CSS/styleproject.css">
     <link rel="stylesheet" href="CSS/scrollbar.css">
+    <link rel="icon" href="IMGS/UI/Favicom.png">
 </head>
 <body>    
     <button class="theme-btn" onclick="toggleTheme()">🌙 / ☀️</button>
@@ -16,9 +17,15 @@
         </header>
 
         <ul class="project-list">
+
             <!-- Spring Up -->
-            <li class="project" data-project="SpringUp">
-                <img src="IMGS/SpringUp/SpringUp1.png" alt="Spring Up Gameplay">
+            <li class="project">
+                <div class="slider" data-project="springup">
+                    <button class="prev">❮</button>
+                    <img src="IMGS/SpringUp/imagem1.png">
+                    <button class="next">❯</button>
+                </div>
+
                 <div class="project-info">
                     <h2 class="project-title">Spring Up</h2>
                     <div class="details">
@@ -31,8 +38,13 @@
             </li>
 
             <!-- Color Morph -->
-            <li class="project" data-project="ColorMorph">
-                <img src="IMGS/ColorMorph/ColorMorph1.png" alt="Color Morph Gameplay">
+            <li class="project">
+                <div class="slider" data-project="colormorph">
+                    <button class="prev">❮</button>
+                    <img src="IMGS/ColorMorph/imagem1.png">
+                    <button class="next">❯</button>
+                </div>
+
                 <div class="project-info">
                     <h2 class="project-title">Color Morph</h2>
                     <div class="details">
@@ -45,8 +57,13 @@
             </li>
 
             <!-- Cursed Revenge -->
-            <li class="project" data-project="CursedByRevenge">
-                <img src="IMGS/CursedByRevenge/CursedByRevenge1.png" alt="Cursed Revenge Gameplay">
+            <li class="project">
+                <div class="slider" data-project="cursed">
+                    <button class="prev">❮</button>
+                    <img src="IMGS/CursedByRevenge/imagem1.png">
+                    <button class="next">❯</button>
+                </div>
+
                 <div class="project-info">
                     <h2 class="project-title">Cursed Revenge</h2>
                     <div class="details">
@@ -57,6 +74,7 @@
                     </div>
                 </div>
             </li>
+
         </ul>
 
         <a class="back" href="index.html">⬅ Voltar</a>
@@ -64,5 +82,6 @@
 
     <script src="JavaScripts/theme.js"></script>
     <script src="JavaScripts/interactions.js"></script>
+    <script src="JavaScripts/slider.js"></script>
 </body>
 </html>
