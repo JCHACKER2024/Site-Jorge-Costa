@@ -1,22 +1,22 @@
 // LISTA DE IMAGENS
 const projectImages = {
     springup: [
-        "IMGS/SpringUp/imagem1.png",
-        "IMGS/SpringUp/imagem2.png",
-        "IMGS/SpringUp/imagem3.png",
+        "../IMGS/SpringUp/imagem1.png",
+        "../IMGS/SpringUp/imagem2.png",
+        "../IMGS/SpringUp/imagem3.png",
     ],
     colormorph: [
-        "IMGS/ColorMorph/imagem1.png",
-        "IMGS/ColorMorph/imagem2.png",
-        "IMGS/ColorMorph/imagem3.png",
+        "../IMGS/ColorMorph/imagem1.png",
+        "../IMGS/ColorMorph/imagem2.png",
+        "../IMGS/ColorMorph/imagem3.png",
     ],
     cursed: [
-        "IMGS/CursedByRevenge/imagem1.png",
-        "IMGS/CursedByRevenge/imagem2.png",
-        "IMGS/CursedByRevenge/imagem3.png",
-        "IMGS/CursedByRevenge/imagem4.png",
-        "IMGS/CursedByRevenge/imagem5.png",
-        "IMGS/CursedByRevenge/imagem6.png",
+        "../IMGS/CursedByRevenge/imagem1.png",
+        "../IMGS/CursedByRevenge/imagem2.png",
+        "../IMGS/CursedByRevenge/imagem3.png",
+        "../IMGS/CursedByRevenge/imagem4.png",
+        "../IMGS/CursedByRevenge/imagem5.png",
+        "../IMGS/CursedByRevenge/imagem6.png",
     ]
 };
 
