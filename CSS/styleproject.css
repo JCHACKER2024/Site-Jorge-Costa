@@ -1,4 +1,4 @@
-/* VARIÁVEIS GLOBAIS - CORRIGIDAS */
+/* VARIÁVEIS GLOBAIS */
 :root {
     --bg-color: black;
     --text-color: white;
@@ -57,7 +57,7 @@ body {
     padding: 20px;
     border-radius: 15px;
     background: rgba(127, 127, 127, 0.1); 
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: 0.3s ease;
     border: 1px solid rgba(127, 127, 127, 0.1);
 }
 
@@ -66,7 +66,7 @@ body {
     background: rgba(127, 127, 127, 0.2);
 }
 
-/* SLIDER */
+/* SLIDER DE IMAGENS */
 .slider {
     width: 320px;
     height: 200px;
@@ -84,8 +84,10 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover; 
+    transition: opacity 0.3s ease;
 }
 
+/* BOTÕES DO SLIDER */
 .slider button {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.7);
@@ -99,7 +101,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .slider button:hover {
@@ -112,16 +114,15 @@ body {
 .slider .prev { left: 10px; }
 .slider .next { right: 10px; }
 
-/* PROJECT */
+/* INFORMAÇÃO DO PROJETO */
 .project-info h2 {
     margin-top: 0;
-    color: var(--text-color);
     font-size: 28px;
 }
 
 .project-title {
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .project-title:hover {
@@ -129,12 +130,12 @@ body {
     text-shadow: 0 0 10px var(--hover-color);
 }
 
-/* DETALHES */
+/* DETALHES (SHOW/HIDE) */
 .details {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s ease;
 }
 
 .details.show {
@@ -182,10 +183,8 @@ body {
     font-size: 18px;
     text-transform: uppercase;                
     letter-spacing: 1px;
-    border: 2px solid transparent;
-    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
 }
 
 .back:hover {
@@ -193,10 +192,9 @@ body {
     color: black;                                         
     transform: translateY(-4px) scale(1.05);
     box-shadow: 0 0 20px var(--hover-color);
-    border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* ANIMAÇÃO FADE IN */
+/* ANIMAÇÕES */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -204,6 +202,7 @@ body {
 
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
+
     .container {
         padding: 20px;
         width: 95%;
@@ -217,15 +216,13 @@ body {
     }
 
     .slider {
-        width: 100% !important; 
-        max-width: 280px; 
-        height: 180px;   
+        width: 100%;
+        max-width: 280px;
+        height: 180px;
         margin: 0 auto;
     }
 
-    .project img, .slider img {
-        width: 100%;
-        height: 100%;
+    .slider img {
         object-fit: contain;
     }
 

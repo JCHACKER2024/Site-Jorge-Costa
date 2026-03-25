@@ -47,13 +47,18 @@ body {
     animation: fadeIn 0.8s ease; 
 }
 
+/* TÍTULOS E TEXTO */
 h1, h2 {
     color: var(--text-color);
     transition: 0.3s;
 }
 
-h2 { font-size: 26px; margin: 15px 0; }
+h2 { 
+    font-size: 26px; 
+    margin: 15px 0; 
+}
 
+/* IMAGENS */
 img {
     display: block;
     margin: 30px auto;
@@ -68,6 +73,7 @@ img:hover {
     border-color: var(--hover-color);
 }
 
+/* LISTAS */
 ul {
     font-size: 20px; 
     list-style-position: inside;
@@ -80,7 +86,7 @@ ul {
     border-radius: 10px;
 }
 
-/* BOTÕES */
+/* BOTÃO DE TEMA */
 .theme-btn {
     position: fixed;   
     top: 20px;         
@@ -106,6 +112,7 @@ ul {
     color: var(--bg-color);
 }
 
+/* BOTÕES (VOLTAR/COMPRAR) */
 .back {
     display: inline-block; 
     margin: 40px auto;     
@@ -118,10 +125,8 @@ ul {
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border: none;
-    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
 }
 
 .back:hover {
@@ -143,10 +148,8 @@ ul {
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border: 2px solid transparent;
-    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 0.3s ease;
     max-width: 280px;
-    cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -154,16 +157,15 @@ ul {
     background-color: var(--hover-color); 
     color: black;
     transform: scale(1.1);
-    border-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 25px var(--hover-color), 0 0 50px rgba(0, 255, 204, 0.3);
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.back:active, .buy-btn:active {
+.back:active, 
+.buy-btn:active {
     transform: scale(0.95);
 }
 
-/* CONTAINER E CARDS */
+/* GRID DE JOGOS (API) */
 #games-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -171,6 +173,7 @@ ul {
     margin-top: 30px;
 }
 
+/* CARDS DOS JOGOS */
 .game-card {
     background-color: rgba(255, 255, 255, 0.05);
     padding: 20px;
@@ -208,7 +211,7 @@ ul {
     text-transform: uppercase;
     font-size: 14px;
     text-decoration: none;
-    transition: 0.3s all ease;
+    transition: 0.3s ease;
 }
 
 .game-card a:hover {
@@ -235,18 +238,18 @@ ul {
     transition: transform 0.3s ease;
 }
 
+/* PREÇO (API) */
 .price-tag {
     font-weight: bold;
     margin: 15px 0;
-    color: var(--text-color);
 }
 
 .price-tag span {
-    color: var(--hover-color); /* Teu verde neon */
+    color: var(--hover-color);
     font-size: 1.2em;
 }
 
-/* O Loader que o professor pediu */
+/* LOADING (API) */
 .loader-container {
     grid-column: 1 / -1;
     text-align: center;
@@ -263,12 +266,12 @@ ul {
     animation: spin 1s linear infinite;
 }
 
+/* ANIMAÇÕES */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-/* ANIMAÇÃO FADE IN */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -286,6 +289,12 @@ ul {
         width: 95%;
         padding: 20px;
     }
-    h2 { font-size: 22px; }
-    ul { font-size: 18px; }
+
+    h2 { 
+        font-size: 22px; 
+    }
+
+    ul { 
+        font-size: 18px; 
+    }
 }

@@ -6,7 +6,7 @@
     --btn-theme-border: white;
     --project-btn-bg: white;
     --project-btn-text: black;
-    --hover-color: #00ffcc; /* MAIS GAME DEV */
+    --hover-color: #00ffcc;
 }
 
 .light-mode {
@@ -19,7 +19,7 @@
     --hover-color: #00bfa6;
 }
 
-/* ESTILO GERAL */
+/* ESTILO GERAL DA PÁGINA */
 body {
     background-image: url("../IMGS/UI/Background.gif");
     background-size: cover;
@@ -44,9 +44,10 @@ body {
     box-sizing: border-box;
     backdrop-filter: blur(8px);
     box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    animation: fadeIn 0.8s ease;
 }
 
-/* ELEMENTOS DO PERFIL */
+/* PERFIL (IMAGEM + TEXTO) */
 .profile-img {
     width: 180px;
     height: 180px;
@@ -70,7 +71,8 @@ h2 {
     margin: 15px 0;
 }
 
-/* LINKS */
+
+/* LINKS GERAIS */
 a {
     color: var(--text-color);
     text-decoration: none;
@@ -81,7 +83,7 @@ a:hover {
     color: var(--hover-color);
 }
 
-/* BOTÃO PROJETOS */
+/* BOTÃO "VER PROJETOS" */
 .project-link {
     display: inline-block;
     margin-top: 15px;     
@@ -162,7 +164,7 @@ a:hover {
     color: var(--bg-color);
 }
 
-/* FOOTER */
+/* FOOTER/CONTACTOS */
 footer {
     margin-top: 40px;
     font-size: 14px;
@@ -173,11 +175,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.main-container {
-    animation: fadeIn 0.8s ease;
-}
-
-/* ANIMAÇÃO FADE IN */
+/* ANIMAÇÕES */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -202,5 +200,7 @@ footer a:hover {
         height: 140px;
     }
 
-    h1 { font-size: 26px; }
+    h1 { 
+        font-size: 26px; 
+    }
 }

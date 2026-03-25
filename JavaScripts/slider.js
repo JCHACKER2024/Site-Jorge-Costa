@@ -1,4 +1,4 @@
-// LISTA DE IMAGENS
+// LISTA DE IMAGENS POR PROJETO
 const projectImages = {
     springup: [
         "../IMGS/SpringUp/imagem1.png",
@@ -20,24 +20,30 @@ const projectImages = {
     ]
 };
 
-// SLIDER
+// INICIAR SLIDERS
 document.querySelectorAll(".slider").forEach(slider => {
+
     const project = slider.dataset.project;
     const images = projectImages[project];
 
-    let current = 0;
-    const img = slider.querySelector("img");
+    if (!images || images.length === 0) return;
 
+    let current = 0;
+
+    const img = slider.querySelector("img");
     const nextBtn = slider.querySelector(".next");
     const prevBtn = slider.querySelector(".prev");
 
+    // BOTÃO NEXT 
     nextBtn.addEventListener("click", () => {
         current = (current + 1) % images.length;
         img.src = images[current];
     });
 
+    // BOTÃO PREV
     prevBtn.addEventListener("click", () => {
         current = (current - 1 + images.length) % images.length;
         img.src = images[current];
     });
+
 });
