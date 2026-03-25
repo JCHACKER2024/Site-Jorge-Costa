@@ -50,11 +50,11 @@ body {
 /* LISTA DE PROJETOS */
 .project {
     display: flex;
-    align-items: center;
+    align-items: center; 
     gap: 40px;
     margin-bottom: 60px;
     text-align: left;
-    padding: 30px;
+    padding: 30px; 
     min-height: 350px; 
     border-radius: 15px;
     background: rgba(127, 127, 127, 0.1); 
@@ -69,7 +69,7 @@ body {
 
 /* SLIDER DE IMAGENS */
 .slider {
-    width: 450px;
+    width: 450px; 
     height: 300px; 
     position: relative;
     display: flex;
@@ -78,6 +78,7 @@ body {
     flex-shrink: 0;
     border-radius: 12px;
     overflow: hidden;
+    background-color: #050505;
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
@@ -85,7 +86,7 @@ body {
 .slider img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: contain; 
     transition: opacity 0.3s ease;
 }
 
@@ -212,7 +213,7 @@ body {
     .project {
         flex-direction: column;
         text-align: center;
-        min-height: auto;
+        min-height: auto; 
         padding: 20px;
     }
 
@@ -222,5 +223,11 @@ body {
         height: 250px;
     }
 
-    .project-info h2 { font-size: 26px; }
+    .slider img {
+        object-fit: contain;
+    }
+
+    .project-info h2 { 
+        font-size: 26px; 
+    }
 }
