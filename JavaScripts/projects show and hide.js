@@ -1,6 +1,5 @@
 const savedState = JSON.parse(localStorage.getItem('projectsDetails')) || {};
 
-
 // SELECIONAR TODOS OS TÍTULOS DOS PROJETOS
 document.querySelectorAll('.project-title').forEach(title => {
 
@@ -11,7 +10,6 @@ document.querySelectorAll('.project-title').forEach(title => {
     if (savedState[projectKey]) {
         details.classList.add('show');
     }
-
 
     // EVENTO CLICK (SHOW/HIDE)
     title.addEventListener('click', () => {
