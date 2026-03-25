@@ -17,7 +17,6 @@
     --btn-theme-border: black;
 }
 
-
 /* ESTILO GERAL */
 body {
     background-image: url("../IMGS/UI/Background.jpg");
@@ -30,7 +29,6 @@ body {
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
 }
-
 
 /* CONTAINER PRINCIPAL */
 .container {
@@ -45,7 +43,6 @@ body {
     box-shadow: 0 0 30px rgba(0,0,0,0.6);
     animation: fadeIn 0.8s ease;
 }
-
 
 /* IMAGEM DE PERFIL */
 .about-img {
@@ -63,7 +60,6 @@ body {
     box-shadow: 0 0 20px var(--hover-color);
 }
 
-
 /* SKILLS */
 .skills-grid {
     display: grid;
@@ -80,37 +76,39 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.1);
     transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center;
 }
 
 .skill-card img {
     width: 100%;
-    height: 100%;
+    height: 140px;
     object-fit: cover;
     filter: grayscale(50%) brightness(0.6);
     transition: 0.4s;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .skill-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    padding: 20px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.9));
-    text-align: left;
+    padding: 5px 0; 
+    text-align: center; 
+    background: rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
 }
 
 .skill-content h3 {
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 0.9rem;
     color: var(--text-color);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-
-/* HOVER DOS CARDS */
+/* SKYLL HOVER */
 .skill-card:hover {
     transform: scale(1.05);
     border-color: var(--hover-color);
@@ -126,7 +124,6 @@ body {
     color: var(--hover-color);
     text-shadow: 0 0 10px var(--hover-color);
 }
-
 
 /* REDES SOCIAIS */
 .socials {
@@ -154,7 +151,6 @@ body {
     transform: translateY(-3px);
 }
 
-
 /* BOTÃO DE TEMA */
 .theme-btn {
     position: fixed; 
@@ -181,7 +177,6 @@ body {
     color: var(--bg-color);
 }
 
-
 /* BOTÃO VOLTAR */
 .back {
     display: inline-block;
@@ -204,7 +199,6 @@ body {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 0 25px var(--hover-color);
 }
-
 
 /* ANIMAÇÕES */
 @keyframes fadeIn {

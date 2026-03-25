@@ -1,9 +1,10 @@
 // LISTA DE IMAGENS POR PROJETO
 const projectImages = {
-    springup: [
-        "../IMGS/SpringUp/imagem1.png",
-        "../IMGS/SpringUp/imagem2.png",
-        "../IMGS/SpringUp/imagem3.png",
+    bubble: [
+        "../IMGS/Bubble/imagem1.png",
+        "../IMGS/Bubble/imagem2.png",
+        "../IMGS/Bubble/imagem3.png",
+        "../IMGS/Bubble/imagem4.png",
     ],
     colormorph: [
         "../IMGS/ColorMorph/imagem1.png",
