@@ -1,24 +1,24 @@
 // LISTA DE IMAGENS POR PROJETO
 const projectImages = {
     bubble: [
-        "../IMGS/Bubble/imagem1.png",
-        "../IMGS/Bubble/imagem2.png",
-        "../IMGS/Bubble/imagem3.png",
-        "../IMGS/Bubble/imagem4.png",
-        "../IMGS/Bubble/imagem5.png",
+        "IMGS/Bubble/Imagem1.png",
+        "IMGS/Bubble/Imagem2.png",
+        "IMGS/Bubble/Imagem3.png",
+        "IMGS/Bubble/Imagem4.png",
+        "IMGS/Bubble/Imagem5.png",
     ],
     colormorph: [
-        "../IMGS/ColorMorph/imagem1.png",
-        "../IMGS/ColorMorph/imagem2.png",
-        "../IMGS/ColorMorph/imagem3.png",
+        "IMGS/ColorMorph/Imagem1.png",
+        "IMGS/ColorMorph/Imagem2.png",
+        "IMGS/ColorMorph/Imagem3.png",
     ],
     cursed: [
-        "../IMGS/CursedByRevenge/imagem1.png",
-        "../IMGS/CursedByRevenge/imagem2.png",
-        "../IMGS/CursedByRevenge/imagem3.png",
-        "../IMGS/CursedByRevenge/imagem4.png",
-        "../IMGS/CursedByRevenge/imagem5.png",
-        "../IMGS/CursedByRevenge/imagem6.png",
+        "IMGS/CursedByRevenge/Imagem1.png",
+        "IMGS/CursedByRevenge/Imagem2.png",
+        "IMGS/CursedByRevenge/Imagem3.png",
+        "IMGS/CursedByRevenge/Imagem4.png",
+        "IMGS/CursedByRevenge/Imagem5.png",
+        "IMGS/CursedByRevenge/Imagem6.png",
     ]
 };
 
