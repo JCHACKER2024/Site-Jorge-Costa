@@ -5,6 +5,7 @@ const projectImages = {
         "../IMGS/Bubble/imagem2.png",
         "../IMGS/Bubble/imagem3.png",
         "../IMGS/Bubble/imagem4.png",
+        "../IMGS/Bubble/imagem5.png",
     ],
     colormorph: [
         "../IMGS/ColorMorph/imagem1.png",
