@@ -1,25 +1,25 @@
-/* TEMAS */
+/* TEMA */
 :root {
-    --bg-color: black;
-    --text-color: white;
-    --card-color: rgba(0, 0, 0, 0.75);
-    --hover-color: #00ffcc; 
-    --hover-text: black;
-    --btn-border: white;
-    --btn-theme-border: white;
+    --cor-fundo: black;
+    --cor-texto: white;
+    --cor-cartao: rgba(0, 0, 0, 0.75);
+    --cor-destaque: #00ffcc; 
+    --texto-hover: black;
+    --borda-botao: white;
+    --borda-botao-tema: white;
 }
 
-.light-mode {
-    --bg-color: white;
-    --text-color: black;
-    --card-color: rgba(255, 255, 255, 0.9);
-    --hover-color: #00bfa6;
-    --hover-text: white;
-    --btn-border: black;
-    --btn-theme-border: black; 
+.modo-claro {
+    --cor-fundo: white;
+    --cor-texto: black;
+    --cor-cartao: rgba(255, 255, 255, 0.9);
+    --cor-destaque: #00bfa6;
+    --texto-hover: white;
+    --borda-botao: black;
+    --borda-botao-tema: black; 
 }
 
-/* ESTILO GERAL */
+/* ESTILO GERAL DA PÁGINA */
 body {
     background-image: url("../IMGS/UI/Background.jpg");
     background-size: cover;
@@ -27,28 +27,28 @@ body {
     background-attachment: fixed;
     background-position: center;
     font-family: Georgia, serif;
-    color: var(--text-color);
+    color: var(--cor-texto);
     margin: 0;
     text-align: center;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* CONTAINER PRINCIPAL */
-.container {
+/* CAIXA PRINCIPAL DA LISTA */
+.contentor {
     width: 90%;
     max-width: 1200px;
     margin: 60px auto;
-    background-color: var(--card-color);
+    background-color: var(--cor-cartao);
     padding: 40px;
     border-radius: 20px;
     box-sizing: border-box;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 30px rgba(0,0,0,0.6);
-    animation: fadeIn 0.8s ease;
+    animation: entradaSuave 0.8s ease;
 }
 
-/* LISTA DE PROJETOS */
-.project {
+/* CADA BLOCO DE PROJETO */
+.projeto {
     display: flex;
     align-items: center; 
     gap: 40px;
@@ -62,7 +62,7 @@ body {
     border: 1px solid rgba(127, 127, 127, 0.1);
 }
 
-.project:hover {
+.projeto:hover {
     transform: scale(1.01);
     background: rgba(127, 127, 127, 0.15);
 }
@@ -94,8 +94,8 @@ body {
 .slider button {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.7);
-    border: 1px solid var(--hover-color);
-    color: var(--hover-color);
+    border: 1px solid var(--cor-destaque);
+    color: var(--cor-destaque);
     font-size: 20px;
     padding: 10px;
     cursor: pointer;
@@ -108,77 +108,78 @@ body {
 }
 
 .slider button:hover {
-    background-color: var(--hover-color);
+    background-color: var(--cor-destaque);
     color: black;
-    box-shadow: 0 0 15px var(--hover-color);
+    box-shadow: 0 0 15px var(--cor-destaque);
 }
 
 .slider .prev { left: 15px; }
 .slider .next { right: 15px; }
 
-/* INFORMAÇÃO DO PROJETO */
-.project-info {
+/* TEXTOS E INFORMAÇÕES DO PROJETO */
+.info-projeto {
     flex-grow: 1; 
     display: flex;
     flex-direction: column;
     justify-content: center; 
 }
 
-.project-info h2 {
+.info-projeto h2 {
     margin: 0;
     font-size: 32px; 
 }
 
-.project-title {
+.titulo-projeto {
     cursor: pointer;
     transition: 0.3s ease;
 }
 
-.project-title:hover {
-    color: var(--hover-color); 
-    text-shadow: 0 0 10px var(--hover-color);
+.titulo-projeto:hover {
+    color: var(--cor-destaque); 
+    text-shadow: 0 0 10px var(--cor-destaque);
 }
 
-/* DETALHES (SHOW/HIDE) */
-.details {
+/* DETALHES SHOW/HIDE */
+.detalhes {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
 }
 
-.details.show {
+.detalhes.show {
     max-height: 400px;
     opacity: 1;
     margin-top: 20px;
 }
 
 /* BOTÃO DE TEMA */
-.theme-btn {
+.botao-tema {
     position: fixed;   
     top: 20px;         
     right: 20px;        
     width: 50px;
     height: 50px;
     border-radius: 50%; 
-    border: 2px solid var(--btn-theme-border); 
-    background-color: var(--card-color);
-    color: var(--text-color);
+    border: 2px solid var(--borda-botao-tema); 
+    background-color: var(--cor-cartao);
+    color: var(--cor-texto);
     cursor: pointer;
     font-size: 18px; 
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s ease;
     z-index: 1000;     
 }
 
 /* BOTÃO VOLTAR */
-.back {
+.botao-voltar {
     display: inline-block;
     margin: 30px auto;
     padding: 12px 30px;
-    background-color: var(--text-color); 
-    color: var(--bg-color);               
+    background-color: var(--cor-texto); 
+    color: var(--cor-fundo);                   
     border-radius: 12px;
     text-decoration: none;
     font-weight: bold;
@@ -187,19 +188,19 @@ body {
     transition: 0.3s ease;
 }
 
-.back:hover {
-    background-color: var(--hover-color); 
+.botao-voltar:hover {
+    background-color: var(--cor-destaque); 
     color: black;                                         
-    box-shadow: 0 0 20px var(--hover-color);
+    box-shadow: 0 0 20px var(--cor-destaque);
 }
 
-/* ANIMAÇÕES */
-@keyframes fadeIn {
+/* ANIMAÇÃO DE ENTRADA */
+@keyframes entradaSuave {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* RESPONSIVIDADE */
+/* ADAPTAÇÃO PARA ECRÃS PEQUENOS */
 @media (max-width: 992px) {
     .slider {
         width: 350px;
@@ -208,9 +209,9 @@ body {
 }
 
 @media (max-width: 768px) {
-    .container { padding: 20px; }
+    .contentor { padding: 20px; }
 
-    .project {
+    .projeto {
         flex-direction: column;
         text-align: center;
         min-height: auto; 
@@ -223,11 +224,7 @@ body {
         height: 250px;
     }
 
-    .slider img {
-        object-fit: contain;
-    }
-
-    .project-info h2 { 
+    .info-projeto h2 { 
         font-size: 26px; 
     }
 }

@@ -1,14 +1,14 @@
 // ALTERAR TEMA
 function toggleTheme() {
-    const isLight = document.body.classList.toggle("light-mode");
-    localStorage.setItem("theme", isLight ? "light" : "dark");
+    const isLight = document.body.classList.toggle("modo-claro");
+    localStorage.setItem("tema", isLight ? "claro" : "escuro");
 }
 
 // GUARDAR TEMA
 function applyTheme() {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "light") {
-        document.body.classList.add("light-mode");
+    const temaSalvo = localStorage.getItem("tema");
+    if (temaSalvo === "claro") {
+        document.body.classList.add("modo-claro");
     }
 }
 

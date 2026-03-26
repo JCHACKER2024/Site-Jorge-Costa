@@ -1,31 +1,30 @@
-const savedState = JSON.parse(localStorage.getItem('projectsDetails')) || {};
+const estadoGuardado = JSON.parse(localStorage.getItem('detalhesProjetos')) || {};
 
 // SELECIONAR TODOS OS TÍTULOS DOS PROJETOS
-document.querySelectorAll('.project-title').forEach(title => {
+document.querySelectorAll('.titulo-projeto').forEach(titulo => {
 
-    const projectKey = title.closest('.project').dataset.project;
-    const details = title.nextElementSibling;
+    const chaveProjeto = titulo.closest('.projeto').querySelector('.slider').dataset.project;
+    const detalhes = titulo.nextElementSibling;
 
-    // RESTAURAR ESTADO (SHOW/HIDE)
-    if (savedState[projectKey]) {
-        details.classList.add('show');
+    // RESTAURAR ESTADO (Abrir se estava aberto antes)
+    if (estadoGuardado[chaveProjeto]) {
+        detalhes.classList.add('show');
     }
 
-    // EVENTO CLICK (SHOW/HIDE)
-    title.addEventListener('click', () => {
-        details.classList.toggle('show');
+    titulo.addEventListener('click', () => {
+        detalhes.classList.toggle('show');
 
-        savedState[projectKey] = details.classList.contains('show');
-        localStorage.setItem('projectsDetails', JSON.stringify(savedState));
+        // Guardar a nova escolha no localStorage
+        estadoGuardado[chaveProjeto] = detalhes.classList.contains('show');
+        localStorage.setItem('detalhesProjetos', JSON.stringify(estadoGuardado));
     });
 
     // EFEITO HOVER
-    title.addEventListener('mouseenter', () => {
-        title.style.textDecoration = 'underline';
+    titulo.addEventListener('mouseenter', () => {
+        titulo.style.textDecoration = 'underline';
     });
 
-    title.addEventListener('mouseleave', () => {
-        title.style.textDecoration = 'none';
+    titulo.addEventListener('mouseleave', () => {
+        titulo.style.textDecoration = 'none';
     });
-
 });

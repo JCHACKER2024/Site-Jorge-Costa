@@ -1,5 +1,5 @@
 // LISTA DE IMAGENS POR PROJETO
-const projectImages = {
+const imagensPorProjeto = {
     bubble: [
         "IMGS/Bubble/Imagem1.png",
         "IMGS/Bubble/Imagem2.png",
@@ -24,24 +24,27 @@ const projectImages = {
 
 // INICIAR SLIDERS
 document.querySelectorAll(".slider").forEach(slider => {
-    const project = slider.dataset.project;
-    const images = projectImages[project];
+    const nomeProjeto = slider.dataset.project;
+    const listaImagens = imagensPorProjeto[nomeProjeto];
 
-    let current = 0;
-    const img = slider.querySelector("img");
+    if (!listaImagens) return;
 
-    img.src = images[current];
+    let indiceAtual = 0;
+    const elementoImg = slider.querySelector("img");
+    const botaoProximo = slider.querySelector(".next"); 
+    const botaoAnterior = slider.querySelector(".prev"); 
 
-    const nextBtn = slider.querySelector(".next");
-    const prevBtn = slider.querySelector(".prev");
-
-    nextBtn.addEventListener("click", () => {
-        current = (current + 1) % images.length;
-        img.src = images[current];
+    // BOTÃO PRÓXIMO
+    botaoProximo.addEventListener("click", (e) => {
+        e.stopPropagation(); 
+        indiceAtual = (indiceAtual + 1) % listaImagens.length;
+        elementoImg.src = listaImagens[indiceAtual];
     });
 
-    prevBtn.addEventListener("click", () => {
-        current = (current - 1 + images.length) % images.length;
-        img.src = images[current];
+    // BOTÃO ANTERIOR
+    botaoAnterior.addEventListener("click", (e) => {
+        e.stopPropagation();
+        indiceAtual = (indiceAtual - 1 + listaImagens.length) % listaImagens.length;
+        elementoImg.src = listaImagens[indiceAtual];
     });
 });

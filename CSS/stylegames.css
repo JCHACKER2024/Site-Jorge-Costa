@@ -1,25 +1,25 @@
-/* TEMAS */
+/* TEMA */
 :root {
-    --bg-color: black;
-    --text-color: white;
-    --card-color: rgba(0, 0, 0, 0.75);
-    --btn-border: white;
-    --hover-color: #00ffcc; 
-    --hover-text: black;
-    --btn-theme-border: white; 
+    --cor-fundo: black;
+    --cor-texto: white;
+    --cor-cartao: rgba(0, 0, 0, 0.75);
+    --borda-botao: white;
+    --cor-destaque: #00ffcc; 
+    --texto-hover: black;
+    --borda-botao-tema: white; 
 }
 
-.light-mode {
-    --bg-color: white;
-    --text-color: black;
-    --card-color: rgba(255, 255, 255, 0.9);
-    --btn-border: black;
-    --hover-color: #00bfa6;
-    --hover-text: white;
-    --btn-theme-border: black; 
+.modo-claro {
+    --cor-fundo: white;
+    --cor-texto: black;
+    --cor-cartao: rgba(255, 255, 255, 0.9);
+    --borda-botao: black;
+    --cor-destaque: #00bfa6;
+    --texto-hover: white;
+    --borda-botao-tema: black; 
 }
 
-/* ESTILO GERAL */
+/* ESTILO GERAL DA PÁGINA */
 body {
     background-image: url("../IMGS/UI/Background.jpg"); 
     background-size: cover;
@@ -29,27 +29,27 @@ body {
     font-family: Georgia, serif;
     text-align: center;
     margin: 0;
-    color: var(--text-color);
+    color: var(--cor-texto);
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* CONTAINER PRINCIPAL */
-.main-container {
+/* CAIXA DE JOGOS */
+.contentor-principal {
     width: 90%;
     max-width: 1000px;
     margin: 60px auto;
     padding: 40px;
-    background-color: var(--card-color);
+    background-color: var(--cor-cartao);
     border-radius: 20px;
     box-sizing: border-box;
     backdrop-filter: blur(8px); 
     box-shadow: 0 0 25px rgba(0,0,0,0.5);
-    animation: fadeIn 0.8s ease; 
+    animation: entradaSuave 0.8s ease; 
 }
 
-/* TÍTULOS E TEXTO */
+/* TÍTULOS */
 h1, h2 {
-    color: var(--text-color);
+    color: var(--cor-texto);
     transition: 0.3s;
 }
 
@@ -58,11 +58,11 @@ h2 {
     margin: 15px 0; 
 }
 
-/* IMAGENS */
+/* IMAGENS DE DESTAQUE DO JOGO */
 img {
     display: block;
     margin: 30px auto;
-    width: 100%;          
+    width: 100%;                  
     max-width: 800px;    
     border-radius: 15px;
     border: 2px solid transparent;
@@ -70,33 +70,32 @@ img {
 }
 
 img:hover {
-    border-color: var(--hover-color);
+    border-color: var(--cor-destaque);
 }
 
-/* LISTAS */
 ul {
     font-size: 20px; 
     list-style-position: inside;
     list-style-type: decimal;
     padding: 20px;
-    color: var(--text-color);
+    color: var(--cor-texto);
     text-align: left; 
     display: inline-block;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
 }
 
-/* BOTÃO DE TEMA */
-.theme-btn {
+/* BOTÃO TEMA */
+.botao-tema {
     position: fixed;   
     top: 20px;         
     right: 20px;        
     width: 50px;
     height: 50px;
     border-radius: 50%; 
-    border: 2px solid var(--btn-theme-border);
-    background-color: var(--card-color);
-    color: var(--text-color);
+    border: 2px solid var(--borda-botao-tema);
+    background-color: var(--cor-cartao);
+    color: var(--cor-texto);
     cursor: pointer;
     font-size: 18px; 
     display: flex;
@@ -106,19 +105,19 @@ ul {
     z-index: 1000;     
 }
 
-.theme-btn:hover {
+.botao-tema:hover {
     transform: scale(1.15) rotate(10deg);
-    background-color: var(--text-color);
-    color: var(--bg-color);
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
 }
 
-/* BOTÕES (VOLTAR/COMPRAR) */
-.back {
+/* BOTÕES VOLTAR E COMPRAR */
+.botao-voltar {
     display: inline-block; 
     margin: 40px auto;     
     padding: 12px 35px;
-    background-color: var(--text-color); 
-    color: var(--bg-color);
+    background-color: var(--cor-texto); 
+    color: var(--cor-fundo);
     border-radius: 12px;
     text-decoration: none;
     font-weight: bold;
@@ -129,19 +128,19 @@ ul {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.back:hover {
-    background-color: var(--hover-color); 
+.botao-voltar:hover {
+    background-color: var(--cor-destaque); 
     color: black;
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 0 25px var(--hover-color);
+    box-shadow: 0 0 25px var(--cor-destaque);
 }
 
-.buy-btn {
+.botao-compra {
     display: block;
     margin: 30px auto;
     padding: 15px 40px;
-    background-color: var(--text-color);
-    color: var(--bg-color);
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
     border-radius: 12px;
     text-decoration: none;
     font-weight: bold;
@@ -153,28 +152,23 @@ ul {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.buy-btn:hover {
-    background-color: var(--hover-color); 
+.botao-compra:hover {
+    background-color: var(--cor-destaque); 
     color: black;
     transform: scale(1.1);
-    box-shadow: 0 0 25px var(--hover-color), 0 0 50px rgba(0, 255, 204, 0.3);
+    box-shadow: 0 0 25px var(--cor-destaque), 0 0 50px rgba(0, 255, 204, 0.3);
 }
 
-.back:active, 
-.buy-btn:active {
-    transform: scale(0.95);
-}
-
-/* GRID DE JOGOS (API) */
-#games-container {
+/* GRELHA DE JOGOS RECOMENDADOS (API) */
+#zona-jogos-api {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
     margin-top: 30px;
 }
 
-/* CARDS DOS JOGOS */
-.game-card {
+/* CARTÕES DOS JOGOS DA API */
+.cartao-jogo {
     background-color: rgba(255, 255, 255, 0.05);
     padding: 20px;
     border-radius: 15px;
@@ -187,25 +181,26 @@ ul {
     align-items: center;
 }
 
-.game-card h3 {
+.cartao-jogo h3 {
     margin: 0 0 10px 0;
     font-size: 1.2rem;
 }
 
-.game-card p {
+.cartao-jogo p {
     font-size: 0.9rem;
     opacity: 0.7;
     margin: 10px 0;
 }
 
-.game-card a {
+/* LINK DENTRO DO CARTÃO DA API */
+.cartao-jogo a {
     display: inline-block;
     width: 80%; 
     padding: 10px 15px;
     margin-top: 10px;
     background-color: transparent;
-    color: var(--text-color);
-    border: 2px solid var(--text-color);
+    color: var(--cor-texto);
+    border: 2px solid var(--cor-texto);
     border-radius: 8px;
     font-weight: bold;
     text-transform: uppercase;
@@ -214,23 +209,23 @@ ul {
     transition: 0.3s ease;
 }
 
-.game-card a:hover {
-    background-color: var(--hover-color);
+.cartao-jogo a:hover {
+    background-color: var(--cor-destaque);
     color: black; 
-    border-color: var(--hover-color);
-    box-shadow: 0 0 15px var(--hover-color);
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 15px var(--cor-destaque);
     transform: translateY(-2px);
 }
 
-.game-card:hover {
+.cartao-jogo:hover {
     transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 0 15px var(--hover-color);
-    border-color: var(--hover-color);
+    box-shadow: 0 0 15px var(--cor-destaque);
+    border-color: var(--cor-destaque);
 }
 
-.game-card img {
+.cartao-jogo img {
     width: 100%;
-    height: 280px;     
+    height: 280px;      
     object-fit: contain; 
     background-color: rgba(0, 0, 0, 0.2); 
     margin: 0 0 15px 0;
@@ -238,19 +233,19 @@ ul {
     transition: transform 0.3s ease;
 }
 
-/* PREÇO (API) */
-.price-tag {
+/* ETIQUETA DE PREÇO */
+.etiqueta-preco {
     font-weight: bold;
     margin: 15px 0;
 }
 
-.price-tag span {
-    color: var(--hover-color);
+.etiqueta-preco span {
+    color: var(--cor-destaque);
     font-size: 1.2em;
 }
 
-/* LOADING (API) */
-.loader-container {
+/* CONTENTOR LOADING */
+.contentor-carregamento {
     grid-column: 1 / -1;
     text-align: center;
     padding: 40px;
@@ -260,19 +255,19 @@ ul {
     width: 40px;
     height: 40px;
     border: 4px solid rgba(255, 255, 255, 0.1);
-    border-top: 4px solid var(--hover-color);
+    border-top: 4px solid var(--cor-destaque);
     border-radius: 50%;
     margin: 0 auto 15px;
-    animation: spin 1s linear infinite;
+    animation: girar 1s linear infinite;
 }
 
 /* ANIMAÇÕES */
-@keyframes spin {
+@keyframes girar {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-@keyframes fadeIn {
+@keyframes entradaSuave {
     from {
         opacity: 0;
         transform: translateY(15px);
@@ -283,9 +278,9 @@ ul {
     }
 }
 
-/* RESPONSIVIDADE */
+/* AJUSTES PARA TELEMÓVEL */
 @media (max-width: 768px) {
-    .main-container {
+    .contentor-principal {
         width: 95%;
         padding: 20px;
     }
