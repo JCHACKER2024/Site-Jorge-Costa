@@ -6,7 +6,7 @@
     --borda-botao-tema: white;
     --fundo-botao-projeto: white;
     --texto-botao-projeto: black;
-    --cor-destaque: #00ffcc; /* Aquele verde neon */
+    --cor-destaque: #00ffcc; 
 }
 
 .modo-claro {
@@ -142,27 +142,33 @@ a:hover {
     position: fixed;   
     top: 20px;         
     right: 20px;        
-    width: 50px;
-    height: 50px;
-    border-radius: 50%; 
+    width: auto;           
+    min-width: 85px;       
+    height: 42px;          
+    padding: 0 15px;       
+    border-radius: 25px;  
     border: 2px solid var(--borda-botao-tema);
     background-color: var(--cor-cartao);
     color: var(--cor-texto);
     cursor: pointer;
-    font-size: 18px;
+    font-size: 13px;       
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10000;        
     transition: 0.3s ease;
-    z-index: 1000;     
+    backdrop-filter: blur(4px);
 }
 
 .botao-tema:hover {
-    transform: scale(1.15) rotate(10deg);
+    transform: translateY(-3px);
     background-color: var(--cor-texto);
     color: var(--cor-fundo);
+    box-shadow: 0 5px 15px var(--cor-destaque);
 }
-
 /* RODAPÉ DA PÁGINA */
 footer {
     margin-top: 40px;
