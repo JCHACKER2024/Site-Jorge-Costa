@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre - Jorge Costa</title>
+
     <link rel="stylesheet" href="CSS/stylesobre.css">
     <link rel="stylesheet" href="CSS/scrollbar.css">
-    <script src="JavaScripts/theme.js"></script>
     <link rel="icon" href="IMGS/UI/Favicom.png">
 </head>
+
 <body>
 
-        <button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()"></button>
+<button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()"></button>
 
 <main class="contentor">
 
@@ -40,45 +41,42 @@
     <h2>Competências & Portfólio</h2>
 
     <div class="grelha-competencias">
-        
-        <div class="cartao-competencia">
-            <img src="IMGS/trabalhos/modelacao.jpg" alt="Modelação 3D">
+
+        <!-- MODELACAO -->
+        <div class="cartao-competencia slider" data-project="modelacao">
+            <button class="prev">❮</button>
+            <img>
+            <button class="next">❯</button>
+
             <div class="conteudo-competencia">
                 <h3>Modelação 3D</h3>
             </div>
         </div>
 
-        <div class="cartao-competencia">
-            <img src="IMGS/trabalhos/ambientes.jpg" alt="Criação de Ambientes">
+        <!-- AMBIENTES -->
+        <div class="cartao-competencia slider" data-project="ambientes">
+            <button class="prev">❮</button>
+            <img>
+            <button class="next">❯</button>
+
             <div class="conteudo-competencia">
                 <h3>Criação de Ambientes</h3>
-            </div>
-        </div>
-
-        <div class="cartao-competencia">
-            <img src="IMGS/trabalhos/texturizacao.jpg" alt="Texturização">
-            <div class="conteudo-competencia">
-                <h3>Texturização</h3>
-            </div>
-        </div>
-
-        <div class="cartao-competencia">
-            <img src="IMGS/trabalhos/animacao_personagem.gif" alt="Animação">
-            <div class="conteudo-competencia">
-                <h3>Animação de Assets</h3>
             </div>
         </div>
 
     </div>
 
     <div class="redes-sociais">
-        <a href="https://www.artstation.com/jorgecosta31" target="_blank" rel="noopener noreferrer">ArtStation</a>
-        <a href="https://www.linkedin.com/in/jorge-costa-1b7279191/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.artstation.com/jorgecosta31" target="_blank">ArtStation</a>
+        <a href="https://www.linkedin.com/in/jorge-costa-1b7279191/" target="_blank">LinkedIn</a>
     </div>
 
     <a class="botao-voltar" href="index.html">⬅ Voltar</a>
 
 </main>
+
+<script src="JavaScripts/theme.js"></script>
+<script src="JavaScripts/skills.js"></script>
 
 </body>
 </html>
