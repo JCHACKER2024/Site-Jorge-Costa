@@ -13,32 +13,32 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     document.querySelectorAll(".slider").forEach(slider => {
-
         const nome = slider.dataset.project;
         const lista = imagensCompetencias[nome];
 
-        if (!lista) return;
+        if (!lista || lista.length === 0) return;
 
         let atual = 0;
-
         const img = slider.querySelector("img");
         const next = slider.querySelector(".next");
         const prev = slider.querySelector(".prev");
 
-        img.src = lista[0];
+        if (img) img.src = lista[0];
 
-        next.addEventListener("click", (e) => {
-            e.stopPropagation();
-            atual = (atual + 1) % lista.length;
-            img.src = lista[atual];
-        });
+        if (next) {
+            next.addEventListener("click", (e) => {
+                e.stopPropagation(); // Impede que o clique abra/feche os detalhes
+                atual = (atual + 1) % lista.length;
+                img.src = lista[atual];
+            });
+        }
 
-        prev.addEventListener("click", (e) => {
-            e.stopPropagation();
-            atual = (atual - 1 + lista.length) % lista.length;
-            img.src = lista[atual];
-        });
-
+        if (prev) {
+            prev.addEventListener("click", (e) => {
+                e.stopPropagation();
+                atual = (atual - 1 + lista.length) % lista.length;
+                img.src = lista[atual];
+            });
+        }
     });
-
 });

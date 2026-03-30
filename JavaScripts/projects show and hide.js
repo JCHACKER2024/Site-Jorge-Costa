@@ -2,8 +2,10 @@ const estadoGuardado = JSON.parse(localStorage.getItem('detalhesProjetos')) || {
 
 // SELECIONAR TODOS OS TÍTULOS DOS PROJETOS
 document.querySelectorAll('.titulo-projeto').forEach(titulo => {
-
-    const chaveProjeto = titulo.closest('.projeto').querySelector('.slider').dataset.project;
+    
+    const projetoElemento = titulo.closest('.projeto');
+    const slider = projetoElemento.querySelector('.slider');
+    const chaveProjeto = slider.dataset.project;
     const detalhes = titulo.nextElementSibling;
 
     // RESTAURAR ESTADO (Abrir se estava aberto antes)
@@ -11,20 +13,11 @@ document.querySelectorAll('.titulo-projeto').forEach(titulo => {
         detalhes.classList.add('show');
     }
 
+    // EVENTO DE CLIQUE PARA MOSTRAR/ESCONDER
     titulo.addEventListener('click', () => {
-        detalhes.classList.toggle('show');
+        const estaAberto = detalhes.classList.toggle('show');
 
-        // Guardar a nova escolha no localStorage
-        estadoGuardado[chaveProjeto] = detalhes.classList.contains('show');
+        estadoGuardado[chaveProjeto] = estaAberto;
         localStorage.setItem('detalhesProjetos', JSON.stringify(estadoGuardado));
-    });
-
-    // EFEITO HOVER
-    titulo.addEventListener('mouseenter', () => {
-        titulo.style.textDecoration = 'underline';
-    });
-
-    titulo.addEventListener('mouseleave', () => {
-        titulo.style.textDecoration = 'none';
     });
 });

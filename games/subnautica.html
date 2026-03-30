@@ -3,44 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subnautica</title>
+    <title>Subnautica - O Melhor Survival</title>
     <link rel="stylesheet" href="../CSS/stylegames.css">
     <link rel="stylesheet" href="../CSS/scrollbar.css">
-    <script src="../JavaScripts/theme.js"></script>
-    <link rel="icon" href="IMGS/UI/Favicom.png">
+    <link rel="icon" href="../IMGS/UI/Favicom.png">
 </head>
 <body>
-    <button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()"></button>
+    <button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()" aria-label="Mudar tema"></button>
 
     <main class="contentor-principal">
         <header>
-            <h1>Melhor Jogo Survival</h1>
+            <h1>Subnautica: Profundezas Desconhecidas</h1>
         </header>
 
-        <img src="../IMGS/Games/Subnautica.jpg" alt="Subnautica Gameplay">
+        <img src="../IMGS/Games/Subnautica.jpg" alt="Exploração submarina em Subnautica">
 
-        <h2>Por estas razões acho Subnautica o melhor jogo de survival:</h2>
-        
-        <ul>
-            <li>O mapa é aberto e enorme para explorar.</li>
-            <li>As criaturas dão medo e tornam o jogo tenso.</li>
-            <li>A história é misteriosa e prende a atenção.</li>
-            <li>A exploração debaixo de água é única e imersiva.</li>
-            <li>Os veículos são a melhor parte do jogo.</li>
-        </ul>
+        <section class="critica-pessoal">
+            <h2>Por que considero Subnautica o melhor jogo de survival?</h2>
+            
+            <ul>
+                <li><strong>Exploração Vertical:</strong> Um mapa enorme e aberto com biomas submarinos únicos.</li>
+                <li><strong>Tensão constante:</strong> Criaturas fascinantes e perigosas que tornam a jornada tensa.</li>
+                <li><strong>Narrativa Misteriosa:</strong> Uma história que se revela aos poucos e prende a atenção.</li>
+                <li><strong>Imersão Total:</strong> A sensação de estar debaixo de água é executada com perfeição.</li>
+                <li><strong>Tecnologia e Veículos:</strong> Construir e pilotar os veículos é, sem dúvida, o ponto alto do jogo.</li>
+            </ul>
+        </section>
 
-        <!-- BOTÃO STEAM DO JOGO -->
-        <a href="https://store.steampowered.com/app/264710/Subnautica/" target="_blank" class="botao-compra">
+        <a href="https://store.steampowered.com/app/264710/Subnautica/" target="_blank" rel="noopener" class="botao-compra">
             🛒 Comprar na Steam
         </a>
 
-        <!-- API SECTION – Jogos semelhantes -->
-        <h2>🎮 Jogos semelhantes</h2>
-        <div id="zona-jogos-api">A carregar jogos...</div>
+        <hr style="border: 0; height: 1px; background: rgba(255,255,255,0.1); margin: 40px 0;">
 
-        <a class="botao-voltar" href="../index.html">⬅ Voltar</a>
+        <section class="sugestoes-api">
+            <h2>🎮 Jogos semelhantes (Preços via API)</h2>
+            <div id="zona-jogos-api">
+                <div class="contentor-carregamento">
+                    <div class="loader"></div>
+                    <p>A mergulhar à procura de preços...</p>
+                </div>
+            </div>
+        </section>
+
+        <a class="botao-voltar" href="../index.html">⬅ Voltar ao Início</a>
     </main>
 
+    <script src="../JavaScripts/theme.js"></script>
     <script src="../JavaScripts/games.js"></script>
 </body>
 </html>

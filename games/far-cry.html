@@ -3,42 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Far Cry</title>
+    <title>Far Cry - O Início de Tudo</title>
     <link rel="stylesheet" href="../CSS/stylegames.css">
     <link rel="stylesheet" href="../CSS/scrollbar.css">
-    <script src="../JavaScripts/theme.js"></script>
-    <link rel="icon" href="IMGS/UI/Favicom.png">
+    <link rel="icon" href="../IMGS/UI/Favicom.png">
 </head>
 <body>
-    <button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()"></button>
+    <button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()" aria-label="Mudar tema"></button>
 
     <main class="contentor-principal">
         <header>
-            <h1>Primeiro jogo que joguei!</h1>
+            <h1>Far Cry: O Meu Primeiro FPS</h1>
         </header>
 
-        <img src="../IMGS/Games/Far Cry.jpg" alt="Far Cry Gameplay">
+        <img src="../IMGS/Games/Far Cry.jpg" alt="Cenário tropical do jogo Far Cry Original">
 
-        <h2>Far Cry é um dos meus jogos favoritos pelas seguintes razões:</h2>
-        
-        <ul>
-            <li>Foi o meu primeiro FPS, por isso tem um valor especial.</li>
-            <li>Tem vários monstros e inimigos diferentes.</li>
-            <li>As missões são intensas e variadas.</li>
-            <li>Várias armas com vários propósitos.</li>
-            <li>As ilhas são grandes e há vários caminhos a explorar.</li>
-        </ul>
+        <section class="critica-pessoal">
+            <h2>Por que Far Cry é um dos meus jogos favoritos?</h2>
+            
+            <ul>
+                <li><strong>Nostalgia:</strong> Foi o primeiro jogo de tiros que joguei, marcando o início da minha paixão.</li>
+                <li><strong>Variedade de Inimigos:</strong> Desde mercenários a criaturas mutantes.</li>
+                <li><strong>Missões Dinâmicas:</strong> Objetivos intensos que exigem diferentes abordagens.</li>
+                <li><strong>Arsenal Completo:</strong> Uma grande variedade de armas, cada uma com o seu propósito.</li>
+                <li><strong>Liberdade de Exploração:</strong> Ilhas vastas com múltiplos caminhos e abordagens táticas.</li>
+            </ul>
+        </section>
 
-        <a href="https://store.steampowered.com/app/13520/Far_Cry/" target="_blank" class="botao-compra">
+        <a href="https://store.steampowered.com/app/13520/Far_Cry/" target="_blank" rel="noopener" class="botao-compra">
             🛒 Comprar na Steam
         </a>
 
-        <h2>🎮 Jogos semelhantes</h2>
-        <div id="zona-jogos-api">A carregar jogos...</div>
+        <hr style="border: 0; height: 1px; background: rgba(255,255,255,0.1); margin: 40px 0;">
 
-        <a class="botao-voltar" href="../index.html">⬅ Voltar</a>
+        <section class="sugestoes-api">
+            <h2>🎮 Jogos semelhantes (Preços em tempo real)</h2>
+            <div id="zona-jogos-api">
+                <div class="contentor-carregamento">
+                    <div class="loader"></div>
+                    <p>A explorar ilhas vizinhas (e preços)...</p>
+                </div>
+            </div>
+        </section>
+
+        <a class="botao-voltar" href="../index.html">⬅ Voltar ao Início</a>
     </main>
 
+    <script src="../JavaScripts/theme.js"></script>
     <script src="../JavaScripts/games.js"></script>
 </body>
 </html>

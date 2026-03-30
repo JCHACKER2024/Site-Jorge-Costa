@@ -22,12 +22,17 @@ const imagensPorProjeto = {
     ]
 };
 
+Object.values(imagensPorProjeto).flat().forEach(src => {
+    const img = new Image();
+    img.src = src;
+});
+
 // INICIAR SLIDERS
 document.querySelectorAll(".slider").forEach(slider => {
     const nomeProjeto = slider.dataset.project;
     const listaImagens = imagensPorProjeto[nomeProjeto];
 
-    if (!listaImagens) return;
+    if (!listaImagens || listaImagens.length === 0) return;
 
     let indiceAtual = 0;
     const elementoImg = slider.querySelector("img");
@@ -35,16 +40,19 @@ document.querySelectorAll(".slider").forEach(slider => {
     const botaoAnterior = slider.querySelector(".prev"); 
 
     // BOTÃO PRÓXIMO
-    botaoProximo.addEventListener("click", (e) => {
-        e.stopPropagation(); 
-        indiceAtual = (indiceAtual + 1) % listaImagens.length;
-        elementoImg.src = listaImagens[indiceAtual];
-    });
+    if (botaoProximo) {
+        botaoProximo.addEventListener("click", (e) => {
+            e.stopPropagation(); 
+            indiceAtual = (indiceAtual + 1) % listaImagens.length;
+            elementoImg.src = listaImagens[indiceAtual];
+        });
+    }
 
-    // BOTÃO ANTERIOR
-    botaoAnterior.addEventListener("click", (e) => {
-        e.stopPropagation();
-        indiceAtual = (indiceAtual - 1 + listaImagens.length) % listaImagens.length;
-        elementoImg.src = listaImagens[indiceAtual];
-    });
+    if (botaoAnterior) {
+        botaoAnterior.addEventListener("click", (e) => {
+            e.stopPropagation();
+            indiceAtual = (indiceAtual - 1 + listaImagens.length) % listaImagens.length;
+            elementoImg.src = listaImagens[indiceAtual];
+        });
+    }
 });

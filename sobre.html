@@ -12,66 +12,70 @@
 
 <body>
 
-<button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()"></button>
+<button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()" aria-label="Alternar modo claro/escuro"></button>
 
 <main class="contentor">
 
-    <h1>Sobre Mim</h1>
+    <header>
+        <h1>Sobre Mim</h1>
+    </header>
 
-    <img src="IMGS/Eu.jpg" class="foto-sobre" alt="Jorge Costa">
+    <img src="IMGS/Eu.jpg" class="foto-sobre" alt="Jorge Costa - Game Developer e Artista 3D">
 
-    <div class="cartao-sobre">
-        <p>
-           Olá! Sou o <strong>Jorge Costa</strong>, tenho 25 anos e sou um entusiasta de desenvolvimento de jogos,
-           com foco na criação de assets 3D e ambientes. Especialista em modelação low e medium poly,
-           texturização e animação de elementos para jogos.
-        </p>
-    </div>
+    <section class="bio">
+        <div class="cartao-sobre">
+            <p>
+               Olá! Sou o <strong>Jorge Costa</strong>, tenho 25 anos e sou um entusiasta de desenvolvimento de jogos, 
+               com foco especializado na criação de <strong>assets 3D e ambientes</strong>. Sou especialista em modelação 
+               low e medium poly, texturização e animação de elementos otimizados para motores de jogo.
+            </p>
+        </div>
 
-    <div class="cartao-sobre">
-        <p>
-            Ao longo dos meus projetos, desenvolvi diversos tipos de assets: 
-            <strong>armas, personagens animadas</strong> e 
-            <strong>cenários low poly</strong>. O meu foco é a integração prática em motores como Unreal Engine e Unity.
-        </p>
-    </div>
+        <div class="cartao-sobre">
+            <p>
+                Ao longo do meu percurso, desenvolvi diversos tipos de assets: 
+                <strong>armas, personagens animadas</strong> e <strong>cenários low poly</strong>. 
+                O meu foco principal é a integração prática e eficiente em motores como <strong>Unreal Engine</strong> e <strong>Unity</strong>.
+            </p>
+        </div>
+    </section>
 
     <hr style="border: 0; height: 1px; background: rgba(255,255,255,0.1); margin: 40px 0;">
 
-    <h2>Competências & Portfólio</h2>
+    <section class="competencias">
+        <h2>Competências & Portfólio</h2>
 
-    <div class="grelha-competencias">
+        <div class="grelha-competencias">
 
-        <!-- MODELACAO -->
-        <div class="cartao-competencia slider" data-project="modelacao">
-            <button class="prev">❮</button>
-            <img>
-            <button class="next">❯</button>
+            <div class="cartao-competencia slider" data-project="modelacao">
+                <button class="prev" aria-label="Imagem anterior">❮</button>
+                <img src="" alt="Exemplo de Modelação 3D"> <button class="next" aria-label="Próxima imagem">❯</button>
 
-            <div class="conteudo-competencia">
-                <h3>Modelação 3D</h3>
+                <div class="conteudo-competencia">
+                    <h3>Modelação 3D</h3>
+                </div>
             </div>
+
+            <div class="cartao-competencia slider" data-project="ambientes">
+                <button class="prev" aria-label="Imagem anterior">❮</button>
+                <img src="" alt="Exemplo de Criação de Ambientes"> <button class="next" aria-label="Próxima imagem">❯</button>
+
+                <div class="conteudo-competencia">
+                    <h3>Criação de Ambientes</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="rodape-sobre">
+        <div class="redes-sociais">
+            <a href="https://www.artstation.com/jorgecosta31" target="_blank" rel="noopener">ArtStation</a>
+            <a href="https://www.linkedin.com/in/jorge-costa-1b7279191/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
 
-        <!-- AMBIENTES -->
-        <div class="cartao-competencia slider" data-project="ambientes">
-            <button class="prev">❮</button>
-            <img>
-            <button class="next">❯</button>
-
-            <div class="conteudo-competencia">
-                <h3>Criação de Ambientes</h3>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="redes-sociais">
-        <a href="https://www.artstation.com/jorgecosta31" target="_blank">ArtStation</a>
-        <a href="https://www.linkedin.com/in/jorge-costa-1b7279191/" target="_blank">LinkedIn</a>
-    </div>
-
-    <a class="botao-voltar" href="index.html">⬅ Voltar</a>
+        <a class="botao-voltar" href="index.html">⬅ Voltar</a>
+    </footer>
 
 </main>
 

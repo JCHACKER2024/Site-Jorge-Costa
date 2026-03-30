@@ -1,8 +1,7 @@
+// ATUALIZAR TEXTO DO BOTÃO
 function atualizarTextoBotao(isLight) {
     const botao = document.getElementById("botao-alternar-tema");
     if (botao) {
-        // Se o site está CLARO, o botão sugere mudar para DARK
-        // Se o site está ESCURO, o botão sugere mudar para LIGHT
         botao.innerText = isLight ? "DARK" : "LIGHT";
     }
 }
@@ -17,13 +16,17 @@ function toggleTheme() {
 // APLICAR TEMA AO CARREGAR
 function applyTheme() {
     const temaSalvo = localStorage.getItem("tema");
-    const isLight = temaSalvo === "claro";
     
-    if (isLight) {
+    // Verifica se o tema guardado é "claro"
+    const deveSerClaro = (temaSalvo === "claro");
+    
+    if (deveSerClaro) {
         document.body.classList.add("modo-claro");
+    } else {
+        document.body.classList.remove("modo-claro");
     }
     
-    atualizarTextoBotao(isLight);
+    atualizarTextoBotao(deveSerClaro);
 }
 
 document.addEventListener("DOMContentLoaded", applyTheme);
