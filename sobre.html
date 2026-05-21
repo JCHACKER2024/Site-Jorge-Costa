@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre - Jorge Costa</title>
+    <link rel="stylesheet" href="CSS/MainPage.css">
     <link rel="stylesheet" href="CSS/stylesobre.css">
     <link rel="stylesheet" href="CSS/scrollbar.css">
     <link rel="icon" href="IMGS/UI/Favicom.png">
@@ -15,101 +16,93 @@
     <nav class="navbar">
         <a href="index.html" class="nav-logo">Jorge Miguel Costa</a>
         <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html" class="active">Sobre</a></li>
             <li><a href="projetos.html">Projetos</a></li>
         </ul>
         <button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()">LIGHT</button>
     </nav>
 
-    <!-- HEADER DA PÁGINA -->
     <div class="page-header">
         <p class="page-label">Quem sou</p>
         <h1 class="page-title">Sobre Mim</h1>
     </div>
 
-    <!-- LAYOUT PRINCIPAL -->
-    <div class="sobre-layout">
+    <div class="sobre-layout-total">
+        <div class="sobre-conteudo-largo">
 
-        <!-- COLUNA ESQUERDA — foto + links -->
-        <div class="sobre-foto-col reveal">
-            <img src="IMGS/Eu.jpg" class="foto-sobre" alt="Jorge Costa"
-                onerror="this.outerHTML='<div class=foto-placeholder>JC</div>'">
-            <div class="sobre-links">
-                <a href="https://www.artstation.com/jorgecosta31" target="_blank" rel="noopener">
-                    ArtStation <span class="link-seta">→</span>
-                </a>
-                <a href="https://www.linkedin.com/in/jorge-costa-1b7279191/" target="_blank" rel="noopener">
-                    LinkedIn <span class="link-seta">→</span>
-                </a>
-                <a href="mailto:jorge_1616_costa@hotmail.com">
-                    Email <span class="link-seta">→</span>
-                </a>
-            </div>
-        </div>
+            <div class="sobre-card-principal reveal">
+                <img src="IMGS/Eu.jpg" class="foto-sobre" alt="Jorge Costa"
+                    onerror="this.outerHTML='<div class=\'foto-placeholder\'>JC</div>'">
+                
+                <div class="sobre-card-info">
+                    <h2 class="bio-titulo">Olá, sou o Jorge.</h2>
 
-        <!-- COLUNA DIREITA — bio + skills + portfólio -->
-        <div class="sobre-bio">
+                    <p class="bio-texto">
+                        Tenho <strong>25 anos</strong> e sou um entusiasta de desenvolvimento de jogos,
+                        com foco especializado na criação de <strong>assets 3D e ambientes</strong>.
+                        Sou especialista em modelação <strong>low e medium poly</strong>, texturização
+                        e animação de elementos otimizados para motores de jogo.
+                    </p>
 
-            <h2 class="bio-titulo reveal">Olá, sou o Jorge.</h2>
-
-            <p class="bio-texto reveal">
-                Tenho <strong>25 anos</strong> e sou um entusiasta de desenvolvimento de jogos,
-                com foco especializado na criação de <strong>assets 3D e ambientes</strong>.
-                Sou especialista em modelação <strong>low e medium poly</strong>, texturização
-                e animação de elementos otimizados para motores de jogo.
-            </p>
-
-            <p class="bio-texto reveal">
-                Ao longo do meu percurso, desenvolvi diversos tipos de assets:
-                <strong>armas, personagens animadas</strong> e <strong>cenários low poly</strong>.
-                O meu foco principal é a integração prática e eficiente em motores como <strong>Unity</strong> e <strong>Godot</strong>.
-            </p>
-
-            <div class="divider reveal"></div>
-
-            <!-- SKILLS -->
-            <h3 class="skills-titulo reveal">Competências</h3>
-            <div class="skills-grid">
-                <div class="skill-tag reveal"><span class="skill-dot"></span>Unity</div>
-                <div class="skill-tag reveal"><span class="skill-dot"></span>Blender</div>
-                <div class="skill-tag reveal"><span class="skill-dot"></span>Modelação 3D</div>
-                <div class="skill-tag reveal"><span class="skill-dot"></span>Level Design</div>
-                <div class="skill-tag reveal"><span class="skill-dot"></span>UI Design</div>
-                <div class="skill-tag reveal"><span class="skill-dot"></span>Assets 3D</div>
-            </div>
-
-            <div class="divider reveal"></div>
-
-            <!-- PORTFÓLIO 3D -->
-            <h3 class="skills-titulo reveal">Portfólio 3D</h3>
-
-            <div class="portfolio-card reveal" data-project="modelacao">
-                <div class="portfolio-slider">
-                    <button class="prev" aria-label="Anterior">❮</button>
-                    <img src="IMGS/Skills/RádioLowPoly.png" alt="Modelação 3D">
-                    <button class="next" aria-label="Seguinte">❯</button>
+                    <p class="bio-texto">
+                        Ao longo do meu percurso, desenvolvi diversos tipos de assets:
+                        <strong>armas, personagens animadas</strong> e <strong>cenários low poly</strong>.
+                        O meu foco principal é a integração prática e eficiente em motores como <strong>Unity</strong> e <strong>Godot</strong>.
+                    </p>
                 </div>
-                <div class="portfolio-label">Modelação 3D</div>
             </div>
 
-            <div class="portfolio-card reveal" data-project="ambientes">
-                <div class="portfolio-slider">
-                    <button class="prev" aria-label="Anterior">❮</button>
-                    <img src="IMGS/Skills/ParqueDia.png" alt="Criação de Ambientes">
-                    <button class="next" aria-label="Seguinte">❯</button>
+            <div class="seccao-bloco">
+                <h3 class="skills-titulo reveal">Competências</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag reveal"><span class="skill-dot"></span>Unity</div>
+                    <div class="skill-tag reveal"><span class="skill-dot"></span>Blender</div>
+                    <div class="skill-tag reveal"><span class="skill-dot"></span>Modelação 3D</div>
+                    <div class="skill-tag reveal"><span class="skill-dot"></span>Level Design</div>
+                    <div class="skill-tag reveal"><span class="skill-dot"></span>UI Design</div>
+                    <div class="skill-tag reveal"><span class="skill-dot"></span>Assets 3D</div>
                 </div>
-                <div class="portfolio-label">Criação de Ambientes</div>
             </div>
 
-            <div class="divider reveal"></div>
+            <div class="seccao-bloco">
+                <h3 class="skills-titulo reveal">Portfólio 3D</h3>
 
-            <!-- FORMAÇÃO -->
-            <h3 class="skills-titulo reveal">Formação</h3>
-            <div class="formacao-bloco reveal">
-                <p class="formacao-ano">Atual</p>
-                <p class="formacao-curso">Licenciatura em Videojogos</p>
-                <p class="formacao-escola">Universidade Lusófona do Porto</p>
+                <div class="portfolio-card reveal" data-project="modelacao">
+                    <div class="portfolio-slider">
+                        <button class="prev" aria-label="Anterior">❮</button>
+                        <img src="IMGS/Skills/RádioLowPoly.png" alt="Modelação 3D">
+                        <button class="next" aria-label="Seguinte">❯</button>
+                    </div>
+                    <div class="portfolio-label">Modelação 3D</div>
+                </div>
+
+                <div class="portfolio-card reveal" data-project="ambientes">
+                    <div class="portfolio-slider">
+                        <button class="prev" aria-label="Anterior">❮</button>
+                        <img src="IMGS/Skills/ParqueDia.png" alt="Criação de Ambientes">
+                        <button class="next" aria-label="Seguinte">❯</button>
+                    </div>
+                    <div class="portfolio-label">Criação de Ambientes</div>
+                </div>
+            </div>
+
+            <div class="seccao-bloco">
+                <h3 class="skills-titulo reveal">Formação</h3>
+                <div class="formacao-bloco reveal">
+                    <p class="formacao-ano">Atual</p>
+                    <p class="formacao-curso">Licenciatura em Videojogos</p>
+                    <p class="formacao-escola">Universidade Lusófona do Porto</p>
+                </div>
+            </div>
+
+            <div class="seccao-bloco">
+                <h3 class="skills-titulo reveal">Links &amp; Contacto</h3>
+                <div class="sobre-links-fundo">
+                    <a href="https://www.artstation.com/jorgecosta31" target="_blank" rel="noopener" class="reveal">ArtStation</a>
+                    <a href="https://www.linkedin.com/in/jorge-costa-1b7279191/" target="_blank" rel="noopener" class="reveal">LinkedIn</a>
+                    <a href="mailto:jorge_1616_costa@hotmail.com" class="reveal">Email</a>
+                </div>
             </div>
 
         </div>

@@ -1,110 +1,15 @@
-:root {
-    --cor-fundo: #0a0a0c;
-    --cor-fundo2: #111116;
-    --cor-texto: #f0ede8;
-    --cor-muted: #7a7870;
-    --cor-borda: #222228;
-    --cor-cartao: #13131a;
-    --cor-destaque: #00ffcc;
-    --cor-destaque2: #00e6b8;
-    --borda-botao-tema: rgba(255,255,255,0.3);
-    --overlay-hero: rgba(10,10,12,0.55);
-}
-
-.modo-claro {
-    --cor-fundo: #f4f4f0;
-    --cor-fundo2: #e8e8e4;
-    --cor-texto: #111112;
-    --cor-muted: #888884;
-    --cor-borda: #d0d0cc;
-    --cor-cartao: #ffffff;
-    --cor-destaque: #00a896;
-    --cor-destaque2: #007a6e;
-    --borda-botao-tema: rgba(0,0,0,0.3);
-    --overlay-hero: rgba(244,244,240,0.6);
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
 
 body {
-    background-color: var(--cor-fundo);
-    background-image: url("../IMGS/UI/Background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    color: var(--cor-texto);
-    font-family: 'DM Sans', Georgia, serif;
-    font-size: 16px;
-    line-height: 1.7;
-    overflow-x: hidden;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 18px; 
+    line-height: 1.8;
 }
 
-/* NAVBAR */
-.navbar {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.1rem 3rem;
-    background: rgba(10,10,12,0.85);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--cor-borda);
-    transition: background 0.3s;
-}
-.modo-claro .navbar { background: rgba(244,244,240,0.9); }
-
-.nav-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.1rem;
-    letter-spacing: 3px;
-    color: var(--cor-destaque);
-    text-decoration: none;
-    white-space: nowrap;
-    transition: opacity 0.2s;
-}
-.nav-logo:hover { opacity: 0.75; }
-
-.nav-links { display: flex; gap: 2.5rem; list-style: none; }
-.nav-links a {
-    color: var(--cor-muted);
-    text-decoration: none;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-.nav-links a:hover, .nav-links a.active { color: var(--cor-destaque); }
-
-.botao-tema {
-    background: transparent;
-    border: 1px solid var(--cor-borda);
-    color: var(--cor-muted);
-    cursor: pointer;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    transition: 0.2s ease;
-    white-space: nowrap;
-}
-.botao-tema:hover {
-    border-color: var(--cor-destaque);
-    color: var(--cor-destaque);
-}
-
-/* PAGE HEADER */
 .page-header {
     padding: 10rem 4rem 3rem;
     position: relative;
+    text-align: left;
+    margin-top: 0 !important;
+    display: block;
 }
 .page-header::before {
     content: '';
@@ -127,123 +32,124 @@ body {
     letter-spacing: 2px; line-height: 1;
 }
 
-/* LAYOUT SOBRE */
-.sobre-layout {
-    padding: 2rem 4rem 6rem;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 5rem;
-    align-items: start;
+/* LAYOUT TOTAL DO ECRÃ */
+.sobre-layout-total {
+    padding: 0 4rem 6rem;
+    display: flex;
+    width: 100%;
+}
+.sobre-conteudo-largo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
 }
 
-/* FOTO */
-.sobre-foto-col {
-    position: sticky;
-    top: 6rem;
+/* CARD DE APRESENTAÇÃO EXPANDIDO */
+.sobre-card-principal {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    background: var(--cor-cartao);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 .foto-sobre {
     width: 100%;
-    aspect-ratio: 3/4;
+    height: 100%;
     object-fit: cover;
-    border-radius: 4px;
-    border: 1px solid var(--cor-borda);
     display: block;
-    transition: 0.3s ease;
-}
-.foto-sobre:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 20px rgba(0,255,204,0.1);
+    border-right: 1px solid var(--cor-borda);
 }
 .foto-placeholder {
     width: 100%;
-    aspect-ratio: 3/4;
-    background: var(--cor-cartao);
-    border: 1px solid var(--cor-borda);
-    border-radius: 4px;
+    height: 100%;
+    background: #0e0e14;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 5rem;
     color: var(--cor-destaque);
-    letter-spacing: 4px;
+    border-right: 1px solid var(--cor-borda);
 }
-.sobre-links {
-    margin-top: 1.2rem;
+.sobre-card-info {
+    padding: 3.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
-.sobre-links a {
-    display: flex;
-    align-items: center;
-    color: var(--cor-muted);
-    text-decoration: none;
-    font-size: 0.8rem; letter-spacing: 1.5px;
-    text-transform: uppercase; font-weight: 500;
-    padding: 0.7rem 0;
-    border-bottom: 1px solid var(--cor-borda);
-    transition: color 0.2s;
-}
-.sobre-links a:hover { color: var(--cor-destaque); }
-.link-seta { margin-left: auto; transition: transform 0.2s; }
-.sobre-links a:hover .link-seta { transform: translateX(4px); }
 
-/* BIO */
+.seccao-bloco {
+    width: 100%;
+}
+
 .bio-titulo {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem; letter-spacing: 1px;
-    margin-bottom: 1.2rem;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    color: var(--cor-texto);
 }
 .bio-texto {
     color: #c0bdb8;
-    font-size: 1rem; line-height: 1.8;
-    margin-bottom: 1.2rem;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
     font-weight: 300;
+    text-align: justify;
 }
+.bio-texto:last-child { margin-bottom: 0; }
 .bio-texto strong { color: var(--cor-texto); font-weight: 500; }
 
-.divider {
-    width: 40px; height: 2px;
-    background: var(--cor-destaque);
-    margin: 2.5rem 0;
-}
-
-/* SKILLS */
+/* TITULOS DAS SECÇÕES */
 .skills-titulo {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem; letter-spacing: 1px;
-    margin-bottom: 1.2rem;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--cor-texto);
 }
+
+/* COMPETÊNCIAS ADAPTÁVEIS */
 .skills-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.7rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
 }
 .skill-tag {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    padding: 0.8rem 1rem;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
     background: var(--cor-cartao);
     border: 1px solid var(--cor-borda);
-    border-radius: 3px;
-    font-size: 0.85rem; font-weight: 500;
-    transition: border-color 0.2s;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 500;
     backdrop-filter: blur(4px);
+    transition: all 0.2s ease;
 }
-.skill-tag:hover { border-color: var(--cor-destaque); }
+.skill-tag:hover { 
+    border-color: var(--cor-destaque); 
+    background: rgba(0, 255, 204, 0.03);
+    transform: translateY(-2px);
+}
 .skill-dot {
-    width: 7px; height: 7px;
+    width: 8px; height: 8px;
     border-radius: 50%;
     background: var(--cor-destaque);
     flex-shrink: 0;
 }
 
-/* PORTFÓLIO 3D */
+/* PORTFÓLIO 3D & SLIDER VERTICAL COMPLETO */
 .portfolio-card {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
     border: 1px solid var(--cor-borda);
-    border-radius: 4px;
+    border-radius: 8px;
     overflow: hidden;
     background: var(--cor-cartao);
     backdrop-filter: blur(4px);
@@ -254,7 +160,7 @@ body {
 .portfolio-slider {
     position: relative;
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 21/9;
     overflow: hidden;
     background: #050505;
     display: flex;
@@ -264,33 +170,36 @@ body {
 .portfolio-slider img {
     width: 100%; height: 100%;
     object-fit: contain;
-    transition: opacity 0.3s ease;
 }
+
 .portfolio-slider button {
     position: absolute;
-    top: 50%; transform: translateY(-50%);
-    background: rgba(0,0,0,0.7);
-    border: 1px solid var(--cor-destaque);
-    color: var(--cor-destaque);
-    width: 36px; height: 36px;
-    border-radius: 50%;
-    font-size: 1rem;
+    top: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    color: rgba(250, 250, 250, 0.4);
+    width: 65px;
+    height: 100%;
+    font-size: 1.6rem;
     cursor: pointer;
     z-index: 10;
-    display: flex; align-items: center; justify-content: center;
-    transition: 0.2s ease;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    transition: all 0.25s ease;
 }
+.portfolio-slider .prev { left: 0; }
+.portfolio-slider .next { right: 0; }
+
 .portfolio-slider button:hover {
-    background: var(--cor-destaque);
-    color: #000;
-    box-shadow: 0 0 12px var(--cor-destaque);
+    background: rgba(0, 0, 0, 0.75);
+    color: var(--cor-destaque);
+    text-shadow: 0 0 10px var(--cor-destaque);
 }
-.portfolio-slider .prev { left: 12px; }
-.portfolio-slider .next { right: 12px; }
 
 .portfolio-label {
-    padding: 0.8rem 1rem;
-    font-size: 0.75rem;
+    padding: 1.2rem 1.8rem;
+    font-size: 1rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--cor-destaque);
@@ -300,54 +209,68 @@ body {
 
 /* FORMAÇÃO */
 .formacao-bloco {
-    padding: 1.2rem;
+    padding: 2rem;
     background: var(--cor-cartao);
     border: 1px solid var(--cor-borda);
-    border-left: 3px solid var(--cor-destaque);
-    border-radius: 0 3px 3px 0;
+    border-left: 4px solid var(--cor-destaque);
+    border-radius: 0 8px 8px 0;
     backdrop-filter: blur(4px);
 }
 .formacao-ano {
-    font-size: 0.7rem; letter-spacing: 2px;
+    font-size: 0.85rem; letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--cor-destaque);
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
 }
 .formacao-curso {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.1rem; letter-spacing: 1px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
 }
 .formacao-escola {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     color: var(--cor-muted);
     margin-top: 0.2rem;
 }
 
-/* FOOTER */
-.rodape {
-    padding: 1.5rem 4rem;
+/* LINKS SOCIAIS NO FUNDO */
+.sobre-links-fundo {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid var(--cor-borda);
-    font-size: 0.75rem;
-    color: var(--cor-muted);
-    background: rgba(10,10,12,0.7);
-    backdrop-filter: blur(8px);
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
-.modo-claro .rodape { background: rgba(244,244,240,0.8); }
-
-/* REVEAL */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.sobre-links-fundo a {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    padding: 1.3rem;
+    background: var(--cor-cartao);
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    color: var(--cor-muted);
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+.sobre-links-fundo a:hover {
+    color: var(--cor-destaque);
+    border-color: var(--cor-destaque);
+    background: rgba(0, 255, 204, 0.02);
+    transform: translateY(-4px);
+}
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-    .navbar { padding: 1rem 1.5rem; }
-    .page-header { padding: 8rem 1.5rem 2rem; }
-    .sobre-layout { grid-template-columns: 1fr; padding: 1.5rem; gap: 2rem; }
-    .sobre-foto-col { position: static; }
-    .foto-sobre, .foto-placeholder { aspect-ratio: 1; max-width: 200px; }
+    .sobre-layout-total { padding: 0 1rem 4rem; }
+    .sobre-conteudo-largo { gap: 3rem; }
+    .sobre-card-principal { grid-template-columns: 1fr; }
+    .foto-sobre, .foto-placeholder { height: 280px; border-right: none; border-bottom: 1px solid var(--cor-borda); }
+    .sobre-card-info { padding: 1.8rem; }
+    .portfolio-slider { aspect-ratio: 16/9; }
+    .portfolio-slider button { width: 45px; font-size: 1.2rem; }
     .skills-grid { grid-template-columns: 1fr; }
-    .rodape { padding: 1.2rem 1.5rem; flex-direction: column; gap: 0.4rem; text-align: center; }
+    .sobre-links-fundo a { min-width: 100%; }
 }
