@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos - Jorge Costa</title>
+    <link rel="stylesheet" href="CSS/MainPage.css">
     <link rel="stylesheet" href="CSS/styleproject.css">
     <link rel="stylesheet" href="CSS/scrollbar.css">
     <link rel="icon" href="IMGS/UI/Favicom.png">
@@ -15,9 +16,9 @@
     <nav class="navbar">
         <a href="index.html" class="nav-logo">Jorge Miguel Costa</a>
         <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="projetos.html" class="active">Projetos</a></li>
         </ul>
         <button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()">LIGHT</button>
     </nav>
@@ -81,11 +82,11 @@
             </div>
         </div>
 
-        <!-- PROJETO 3 — substitui quando tiveres o novo projeto -->
+        <!-- PROJETO 3 -->
         <div class="projeto reveal">
             <div class="slider" data-project="novo">
                 <button class="prev" aria-label="Anterior">❮</button>
-                <img src="" alt="Novo Projeto" onerror="this.parentElement.classList.add('sem-imagem')">
+                <div class="slider-placeholder-wrap"></div>
                 <button class="next" aria-label="Seguinte">❯</button>
             </div>
             <div class="info-projeto">
@@ -108,9 +109,8 @@
         <span>Game Developer &amp; 3D Artist</span>
     </footer>
 
-    <script src="JavaScripts/theme.js"></script>
-    <script src="JavaScripts/reveal.js"></script>
-    <script src="JavaScripts/slider.js"></script>
-    <script src="JavaScripts/projects show and hide.js"></script>
+    <script src="JS/theme.js"></script>
+    <script src="JS/reveal.js"></script>
+    <script src="JS/interactions.js"></script>
 </body>
 </html>

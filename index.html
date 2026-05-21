@@ -42,9 +42,8 @@
             </div>
 
             <div class="hero-video-wrap">
-                <div class="hero-video-placeholder">
-                    <span>VÍDEO EM BREVE</span>
-                </div>
+                <!-- Vídeo Principal de Destaque / Showreel -->
+                <video src="VIDEOS/Showreel.mp4" muted loop playsinline preload="metadata" class="projeto-video"></video>
             </div>
         </div>
 
@@ -70,10 +69,12 @@
         <h2 class="seccao-titulo reveal">Projetos em Destaque</h2>
         <div class="projetos-grid">
 
+            <!-- Card 1: That's My Bubble! -->
             <a href="projetos.html" class="projeto-card reveal">
                 <div class="projeto-img">
                     <img src="IMGS/Bubble/Imagem1.png" alt="That's My Bubble!"
                         onerror="this.parentElement.innerHTML='<div class=projeto-img-placeholder>That\'s My Bubble!</div>'">
+                    <video src="VIDEOS/BubblePreview.mp4" muted loop playsinline preload="metadata" class="projeto-video"></video>
                 </div>
                 <div class="projeto-info">
                     <p class="projeto-genre">2D Arcade · Game Jam</p>
@@ -82,10 +83,12 @@
                 </div>
             </a>
 
+            <!-- Card 2: Color Morph -->
             <a href="projetos.html" class="projeto-card reveal">
                 <div class="projeto-img">
                     <img src="IMGS/ColorMorph/Imagem1.png" alt="Color Morph"
                         onerror="this.parentElement.innerHTML='<div class=projeto-img-placeholder>Color Morph</div>'">
+                    <video src="VIDEOS/ColorMorphPreview.mp4" muted loop playsinline preload="metadata" class="projeto-video"></video>
                 </div>
                 <div class="projeto-info">
                     <p class="projeto-genre">2D Memory Sidescroller</p>
@@ -94,14 +97,17 @@
                 </div>
             </a>
 
+            <!-- Card 3: Em Breve -->
             <a href="projetos.html" class="projeto-card reveal">
                 <div class="projeto-img">
                     <div class="projeto-img-placeholder">Em Breve</div>
+                    <!-- Deixado pronto para quando tiveres o terceiro vídeo -->
+                    <video src="VIDEOS/BrevePreview.mp4" muted loop playsinline preload="metadata" class="projeto-video"></video>
                 </div>
                 <div class="projeto-info">
                     <p class="projeto-genre">Em Breve</p>
                     <h3 class="projeto-nome">???</h3>
-                    <p class="projeto-desc">Novo projeto a ser anunciou em breve.</p>
+                    <p class="projeto-desc">Novo projeto a ser anunciado em breve.</p>
                 </div>
             </a>
 
@@ -123,13 +129,12 @@
         <span>Game Developer &amp; 3D Artist</span>
     </footer>
 
-    <script src="JavaScripts/theme.js"></script>
-    <script src="JavaScripts/reveal.js"></script>
-
+    <script src="JS/theme.js"></script>
+    <script src="JS/reveal.js"></script>
+    <script src="JS/interactions.js"></script>
     <script>
         const track = document.getElementById('skills-track');
         if (track) {
-            // Clona o conteúdo original 3 vezes para garantir preenchimento em qualquer ecrã
             const content = track.innerHTML;
             track.innerHTML = content + content + content + content;
         }
