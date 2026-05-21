@@ -12,35 +12,55 @@
 </head>
 <body>
 
-    <button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()"></button>
-
     <nav class="navbar">
-        <a href="index.html" class="nav-logo">JC</a>
+        <a href="index.html" class="nav-logo">Jorge Miguel Costa</a>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="projetos.html">Projetos</a></li>
         </ul>
+        <button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()">LIGHT</button>
     </nav>
 
+    <!-- HERO -->
     <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-grid"></div>
-        <div class="hero-content">
-            <span class="hero-tag">Game Developer &amp; 3D Artist</span>
-            <h1 class="hero-nome">JORGE<br><span class="nome-destaque">COSTA</span></h1>
-            <p class="hero-sub">Especializado em assets 3D, ambientes low poly e integração em motores de jogo como Unity.</p>
-            <div class="hero-btns">
-                <a href="projetos.html" class="btn btn-primary">Ver Projetos</a>
-                <a href="sobre.html" class="btn btn-outline">Sobre Mim</a>
+    <div class="hero-overlay"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-inner">
+
+            <!-- CARD ESQUERDA -->
+            <div class="hero-card">
+                <img src="IMGS/Eu.jpg" alt="Jorge Costa" class="hero-foto"
+                    onerror="this.outerHTML='<div class=\'hero-foto-placeholder\'>JC</div>'">
+                <div class="hero-info">
+                    <span class="hero-tag">Game Developer &amp; 3D Artist</span>
+                    <h1 class="hero-nome">JORGE <span class="nome-destaque">COSTA</span></h1>
+                    <p class="hero-sub">Especializado em assets 3D, ambientes low poly e integração em motores de jogo como Unity.</p>
+                    <div class="hero-btns">
+                        <a href="projetos.html" class="btn btn-primary">Ver Projetos</a>
+                        <a href="sobre.html" class="btn btn-outline">Sobre Mim</a>
+                    </div>
+                </div>
             </div>
+
+            <!-- VÍDEO DIREITA -->
+            <div class="hero-video-wrap">
+                <!-- <video autoplay muted loop playsinline src="IMGS/UI/intro.mp4"></video> -->
+                <div class="hero-video-placeholder">
+                    <span>VÍDEO EM BREVE</span>
+                </div>
+            </div>
+
         </div>
+
         <div class="scroll-hint">
             <div class="scroll-line"></div>
             Scroll
         </div>
     </section>
 
+    <!-- SKILLS STRIP -->
     <div class="skills-strip">
         <div class="skills-track">
             <span class="skill-item"><span class="skill-dot"></span>Unity</span>
@@ -60,6 +80,7 @@
         </div>
     </div>
 
+    <!-- PROJETOS -->
     <section class="seccao-projetos">
         <p class="seccao-label reveal">Trabalho</p>
         <h2 class="seccao-titulo reveal">Projetos em Destaque</h2>
@@ -103,6 +124,7 @@
         </div>
     </section>
 
+    <!-- CONTACTO -->
     <section class="seccao-contacto">
         <p class="seccao-label">Contacto</p>
         <h2 class="seccao-titulo">Vamos Trabalhar<br>Juntos</h2>
