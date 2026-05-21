@@ -1,35 +1,14 @@
-/* SCROLLBAR (MODO ESCURO) */
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: #0a0a0a; 
-    border-radius: 10px;
-}
-
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0a0c; border-radius: 10px; }
 ::-webkit-scrollbar-thumb {
-    background: #1a3a3a; 
+    background: #1a3a36;
     border-radius: 10px;
-    border: 3px solid #0a0a0a;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #0a0a0c;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: var(--cor-destaque);
-    box-shadow: 0 0 10px var(--cor-destaque);
+    box-shadow: 0 0 8px var(--cor-destaque);
 }
-
-/* SCROLLBAR (MODO CLARO) */
-.modo-claro::-webkit-scrollbar-track {
-    background: #f0f0f0;
-}
-
-.modo-claro::-webkit-scrollbar-thumb {
-    background: #ccddee; 
-    border: 3px solid #f0f0f0;
-}
-
-.modo-claro::-webkit-scrollbar-thumb:hover {
-    background: var(--cor-destaque);
-}
+.modo-claro ::-webkit-scrollbar-track { background: #f4f4f0; }
+.modo-claro ::-webkit-scrollbar-thumb { background: #b0d0cc; border: 2px solid #f4f4f0; }
+.modo-claro ::-webkit-scrollbar-thumb:hover { background: var(--cor-destaque); }

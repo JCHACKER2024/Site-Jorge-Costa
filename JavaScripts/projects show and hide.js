@@ -1,23 +1,28 @@
-const estadoGuardado = JSON.parse(localStorage.getItem('detalhesProjetos')) || {};
+document.addEventListener("DOMContentLoaded", () => {
 
-// SELECIONAR TODOS OS TÍTULOS DOS PROJETOS
-document.querySelectorAll('.titulo-projeto').forEach(titulo => {
-    
-    const projetoElemento = titulo.closest('.projeto');
-    const slider = projetoElemento.querySelector('.slider');
-    const chaveProjeto = slider.dataset.project;
-    const detalhes = titulo.nextElementSibling;
+    const estadoGuardado = JSON.parse(localStorage.getItem('detalhesProjetos')) || {};
 
-    // RESTAURAR ESTADO (Abrir se estava aberto antes)
-    if (estadoGuardado[chaveProjeto]) {
-        detalhes.classList.add('show');
-    }
+    document.querySelectorAll('.titulo-projeto').forEach(titulo => {
+        const projetoElemento = titulo.closest('.projeto');
+        const slider = projetoElemento.querySelector('.slider');
+        const chaveProjeto = slider ? slider.dataset.project : null;
+        const detalhes = titulo.nextElementSibling;
 
-    // EVENTO DE CLIQUE PARA MOSTRAR/ESCONDER
-    titulo.addEventListener('click', () => {
-        const estaAberto = detalhes.classList.toggle('show');
+        // RESTAURAR ESTADO
+        if (chaveProjeto && estadoGuardado[chaveProjeto]) {
+            detalhes.classList.add('show');
+            titulo.classList.add('aberto');
+        }
 
-        estadoGuardado[chaveProjeto] = estaAberto;
-        localStorage.setItem('detalhesProjetos', JSON.stringify(estadoGuardado));
+        // CLIQUE
+        titulo.addEventListener('click', () => {
+            const estaAberto = detalhes.classList.toggle('show');
+            titulo.classList.toggle('aberto', estaAberto);
+
+            if (chaveProjeto) {
+                estadoGuardado[chaveProjeto] = estaAberto;
+                localStorage.setItem('detalhesProjetos', JSON.stringify(estadoGuardado));
+            }
+        });
     });
 });

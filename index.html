@@ -7,60 +7,119 @@
     <link rel="stylesheet" href="CSS/MainPage.css">
     <link rel="stylesheet" href="CSS/scrollbar.css">
     <link rel="icon" href="IMGS/UI/Favicom.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()"></button>
 
-    <main class="contentor-principal">
-        <header>
-            <h1>Game Developer</h1>
-        </header>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">JC</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+        </ul>
+    </nav>
 
-        <img src="IMGS/UI/Favicom.png" class="foto-perfil" alt="Jorge Costa - Foto de Perfil">
-        
-        <h2><a href="sobre.html">Jorge Costa</a></h2>
-
-        <section class="seccao-cartoes">
-            <h2>Jogos Favoritos</h2>
-            
-            <div class="zona-jogos">
-                
-                <div class="cartao-jogo">
-                    <a href="games/far-cry.html">
-                        <img src="IMGS/Games/Far Cry.jpg" alt="Far Cry">
-                        <h3>Far Cry</h3>
-                    </a>
-                </div>
-
-                <div class="cartao-jogo">
-                    <a href="games/dying-ligth.html">
-                        <img src="IMGS/Games/dying-light.jpg" alt="Dying Light">
-                        <h3>Dying Light</h3>
-                    </a>
-                </div>
-
-                <div class="cartao-jogo">
-                    <a href="games/subnautica.html">
-                        <img src="IMGS/Games/Subnautica.jpg" alt="Subnautica">
-                        <h3>Subnautica</h3>
-                    </a>
-                </div>
-                
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <span class="hero-tag">Game Developer &amp; 3D Artist</span>
+            <h1 class="hero-nome">JORGE<br><span class="nome-destaque">COSTA</span></h1>
+            <p class="hero-sub">Especializado em assets 3D, ambientes low poly e integração em motores de jogo como Unity.</p>
+            <div class="hero-btns">
+                <a href="projetos.html" class="btn btn-primary">Ver Projetos</a>
+                <a href="sobre.html" class="btn btn-outline">Sobre Mim</a>
             </div>
+        </div>
+        <div class="scroll-hint">
+            <div class="scroll-line"></div>
+            Scroll
+        </div>
+    </section>
 
-            <h2>Projetos Realizados</h2>
-            <a class="botao-projetos" href="projetos.html">Ver Projetos</a>
-        </section>
+    <div class="skills-strip">
+        <div class="skills-track">
+            <span class="skill-item"><span class="skill-dot"></span>Unity</span>
+            <span class="skill-item"><span class="skill-dot"></span>Blender</span>
+            <span class="skill-item"><span class="skill-dot"></span>Modelação 3D</span>
+            <span class="skill-item"><span class="skill-dot"></span>Texturização</span>
+            <span class="skill-item"><span class="skill-dot"></span>Level Design</span>
+            <span class="skill-item"><span class="skill-dot"></span>UI Design</span>
+            <span class="skill-item"><span class="skill-dot"></span>HTML / CSS</span>
+            <span class="skill-item"><span class="skill-dot"></span>Unity</span>
+            <span class="skill-item"><span class="skill-dot"></span>Blender</span>
+            <span class="skill-item"><span class="skill-dot"></span>Modelação 3D</span>
+            <span class="skill-item"><span class="skill-dot"></span>Texturização</span>
+            <span class="skill-item"><span class="skill-dot"></span>Level Design</span>
+            <span class="skill-item"><span class="skill-dot"></span>UI Design</span>
+            <span class="skill-item"><span class="skill-dot"></span>HTML / CSS</span>
+        </div>
+    </div>
 
-        <footer>
-            <p>Contacto: jorge_1616_costa@hotmail.com</a></p>
-            <p>
-                <a href="https://www.facebook.com/profile.php?id=100052424652393" target="_blank" rel="noopener">Facebook</a> |
-                <a href="https://www.linkedin.com/in/jorge-costa-1b7279191/" target="_blank" rel="noopener">LinkedIn</a>
-            </p>
-        </footer>
-    </main>
+    <section class="seccao-projetos">
+        <p class="seccao-label reveal">Trabalho</p>
+        <h2 class="seccao-titulo reveal">Projetos em Destaque</h2>
+        <div class="projetos-grid">
+
+            <a href="projetos.html" class="projeto-card reveal">
+                <div class="projeto-img">
+                    <img src="IMGS/Bubble/Imagem1.png" alt="That's My Bubble!"
+                        onerror="this.parentElement.innerHTML='<div class=projeto-img-placeholder>That\'s My Bubble!</div>'">
+                </div>
+                <div class="projeto-info">
+                    <p class="projeto-genre">2D Arcade · Game Jam</p>
+                    <h3 class="projeto-nome">That's My Bubble!</h3>
+                    <p class="projeto-desc">Submarino protege a sua bolha de peixes e lixo num desafio de reflexos e estratégia.</p>
+                </div>
+            </a>
+
+            <a href="projetos.html" class="projeto-card reveal">
+                <div class="projeto-img">
+                    <img src="IMGS/ColorMorph/Imagem1.png" alt="Color Morph"
+                        onerror="this.parentElement.innerHTML='<div class=projeto-img-placeholder>Color Morph</div>'">
+                </div>
+                <div class="projeto-info">
+                    <p class="projeto-genre">2D Memory Sidescroller</p>
+                    <h3 class="projeto-nome">Color Morph</h3>
+                    <p class="projeto-desc">Memória e reflexos rápidos — identifica a forma correta sob pressão.</p>
+                </div>
+            </a>
+
+            <a href="projetos.html" class="projeto-card reveal">
+                <div class="projeto-img">
+                    <div class="projeto-img-placeholder">Em Breve</div>
+                </div>
+                <div class="projeto-info">
+                    <p class="projeto-genre">Em Breve</p>
+                    <h3 class="projeto-nome">???</h3>
+                    <p class="projeto-desc">Novo projeto a ser anunciado em breve.</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="seccao-contacto">
+        <p class="seccao-label">Contacto</p>
+        <h2 class="seccao-titulo">Vamos Trabalhar<br>Juntos</h2>
+        <a href="mailto:jorge_1616_costa@hotmail.com" class="contacto-email">jorge_1616_costa@hotmail.com</a>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100052424652393" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.linkedin.com/in/jorge-costa-1b7279191/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.artstation.com/jorgecosta31" target="_blank" rel="noopener">ArtStation</a>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <span>© 2025 Jorge Costa</span>
+        <span>Game Developer &amp; 3D Artist</span>
+    </footer>
 
     <script src="JavaScripts/theme.js"></script>
+    <script src="JavaScripts/reveal.js"></script>
 </body>
 </html>

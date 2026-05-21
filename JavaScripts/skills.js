@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const imagensCompetencias = {
+    const imagens = {
         modelacao: [
             "IMGS/Skills/RádioLowPoly.png",
             "IMGS/Skills/RádioHighPoly.png"
@@ -12,27 +12,25 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
     };
 
-    document.querySelectorAll(".slider").forEach(slider => {
-        const nome = slider.dataset.project;
-        const lista = imagensCompetencias[nome];
-
+    document.querySelectorAll(".portfolio-card").forEach(card => {
+        const nome = card.dataset.project;
+        const lista = imagens[nome];
         if (!lista || lista.length === 0) return;
 
         let atual = 0;
-        const img = slider.querySelector("img");
-        const next = slider.querySelector(".next");
-        const prev = slider.querySelector(".prev");
+        const img = card.querySelector("img");
+        const next = card.querySelector(".next");
+        const prev = card.querySelector(".prev");
 
         if (img) img.src = lista[0];
 
         if (next) {
             next.addEventListener("click", (e) => {
-                e.stopPropagation(); // Impede que o clique abra/feche os detalhes
+                e.stopPropagation();
                 atual = (atual + 1) % lista.length;
                 img.src = lista[atual];
             });
         }
-
         if (prev) {
             prev.addEventListener("click", (e) => {
                 e.stopPropagation();

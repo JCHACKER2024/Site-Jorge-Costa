@@ -7,78 +7,111 @@
     <link rel="stylesheet" href="CSS/styleproject.css">
     <link rel="stylesheet" href="CSS/scrollbar.css">
     <link rel="icon" href="IMGS/UI/Favicom.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>    
+<body>
+
     <button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()"></button>
 
-    <main class="contentor">
-        <header>
-            <h1>Os Meus Projetos</h1>
-        </header>
-
-        <ul class="lista-projetos">
-
-            <li class="projeto">
-                <div class="slider" data-project="bubble">
-                    <button class="prev" aria-label="Imagem anterior">❮</button>
-                    <img src="IMGS/Bubble/Imagem1.png" alt="Screenshot do jogo That’s My Bubble!">
-                    <button class="next" aria-label="Próxima imagem">❯</button>
-                </div>
-
-                <div class="info-projeto">
-                    <h2 class="titulo-projeto">That’s My Bubble!</h2>
-                    <div class="detalhes">
-                        <p><strong>Género:</strong> 2D Arcade</p>
-                        <p><strong>Descrição:</strong> Jogo desenvolvido numa game jam onde o jogador controla um submarino e deve proteger a sua bolha de peixes e lixo.</p>
-                        <p><strong>Função:</strong> Artista</p>
-                        <p><strong>Contribuições:</strong> Criação da arte do jogo, incluindo ambiente, interface (UI) e animações.</p>
-                    </div>
-                </div>
-            </li>
-
-            <li class="projeto">
-                <div class="slider" data-project="colormorph">
-                    <button class="prev" aria-label="Imagem anterior">❮</button>
-                    <img src="IMGS/ColorMorph/Imagem1.png" alt="Screenshot do jogo Color Morph">
-                    <button class="next" aria-label="Próxima imagem">❯</button>
-                </div>
-
-                <div class="info-projeto">
-                    <h2 class="titulo-projeto">Color Morph</h2>
-                    <div class="detalhes">
-                        <p><strong>Género:</strong> 2D Memory Sidescroller</p>
-                        <p><strong>Descrição:</strong> Jogo focado em memória e reflexos rápidos, onde o jogador deve identificar a forma correta sob pressão.</p>
-                        <p><strong>Função:</strong> Artista</p>
-                        <p><strong>Contribuições:</strong> Desenvolvimento completo da interface de utilizador (UI).</p>
-                    </div>
-                </div>
-            </li>
-
-            <li class="projeto">
-                <div class="slider" data-project="cursed">
-                    <button class="prev" aria-label="Imagem anterior">❮</button>
-                    <img src="IMGS/CursedByRevenge/Imagem1.png" alt="Screenshot do jogo Cursed Revenge">
-                    <button class="next" aria-label="Próxima imagem">❯</button>
-                </div>
-
-                <div class="info-projeto">
-                    <h2 class="titulo-projeto">Cursed Revenge</h2>
-                    <div class="detalhes">
-                        <p><strong>Género:</strong> 2D Top-Down Pixel Art</p>
-                        <p><strong>Descrição:</strong> Jogo narrativo onde controlamos uma samurai em busca de vingança contra um demónio ancestral.</p>
-                        <p><strong>Função:</strong> Artista</p>
-                        <p><strong>Contribuições:</strong> Level design, decoração de cenários e criação de assets variados.</p>
-                    </div>
-                </div>
-            </li>
-
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">JC</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="projetos.html" class="active">Projetos</a></li>
         </ul>
+    </nav>
 
-        <a class="botao-voltar" href="index.html">⬅ Voltar</a>
+    <div class="page-header">
+        <p class="page-label">Trabalho</p>
+        <h1 class="page-title">Os Meus Projetos</h1>
+    </div>
+
+    <main class="projetos-lista">
+
+        <!-- PROJETO 1 -->
+        <div class="projeto reveal">
+            <div class="slider" data-project="bubble">
+                <button class="prev" aria-label="Anterior">❮</button>
+                <img src="IMGS/Bubble/Imagem1.png" alt="That's My Bubble!">
+                <button class="next" aria-label="Seguinte">❯</button>
+                <div class="slider-dots" id="dots-bubble"></div>
+            </div>
+            <div class="info-projeto">
+                <div class="projeto-numero">01</div>
+                <p class="projeto-genre">2D Arcade · Game Jam</p>
+                <h2 class="titulo-projeto">That's My Bubble!</h2>
+                <div class="detalhes">
+                    <p><strong>Descrição:</strong> Jogo desenvolvido numa game jam onde o jogador controla um submarino e deve proteger a sua bolha de peixes e lixo.</p>
+                    <p><strong>Função:</strong> Artista</p>
+                    <p><strong>Contribuições:</strong> Criação da arte do jogo, incluindo ambiente, interface (UI) e animações.</p>
+                    <div class="tags">
+                        <span class="tag">Godot</span>
+                        <span class="tag">2D Art</span>
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">Animação</span>
+                        <span class="tag">Game Jam</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJETO 2 -->
+        <div class="projeto reveal">
+            <div class="slider" data-project="colormorph">
+                <button class="prev" aria-label="Anterior">❮</button>
+                <img src="IMGS/ColorMorph/Imagem1.png" alt="Color Morph">
+                <button class="next" aria-label="Seguinte">❯</button>
+                <div class="slider-dots" id="dots-colormorph"></div>
+            </div>
+            <div class="info-projeto">
+                <div class="projeto-numero">02</div>
+                <p class="projeto-genre">2D Memory Sidescroller</p>
+                <h2 class="titulo-projeto">Color Morph</h2>
+                <div class="detalhes">
+                    <p><strong>Descrição:</strong> Jogo focado em memória e reflexos rápidos, onde o jogador deve identificar a forma correta sob pressão.</p>
+                    <p><strong>Função:</strong> Artista</p>
+                    <p><strong>Contribuições:</strong> Desenvolvimento completo da interface de utilizador (UI).</p>
+                    <div class="tags">
+                        <span class="tag">Godot</span>
+                        <span class="tag">UI Design</span>
+                        <span class="tag">2D</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJETO 3 — substitui quando tiveres o novo projeto -->
+        <div class="projeto reveal">
+            <div class="slider" data-project="novo">
+                <button class="prev" aria-label="Anterior">❮</button>
+                <img src="" alt="Novo Projeto" onerror="this.parentElement.classList.add('sem-imagem')">
+                <button class="next" aria-label="Seguinte">❯</button>
+            </div>
+            <div class="info-projeto">
+                <div class="projeto-numero">03</div>
+                <p class="projeto-genre">Em Breve</p>
+                <h2 class="titulo-projeto">Novo Projeto</h2>
+                <div class="detalhes">
+                    <p>Este espaço está reservado para o próximo projeto.</p>
+                    <div class="tags">
+                        <span class="tag">Em Breve</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
+    <footer class="rodape">
+        <span>© 2025 Jorge Costa</span>
+        <span>Game Developer &amp; 3D Artist</span>
+    </footer>
+
     <script src="JavaScripts/theme.js"></script>
-    <script src="JavaScripts/projects show and hide.js"></script>
+    <script src="JavaScripts/reveal.js"></script>
     <script src="JavaScripts/slider.js"></script>
+    <script src="JavaScripts/projects show and hide.js"></script>
 </body>
 </html>

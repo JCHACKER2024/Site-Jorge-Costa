@@ -1,58 +1,61 @@
-// LISTA DE IMAGENS POR PROJETO
-const imagensPorProjeto = {
-    bubble: [
-        "IMGS/Bubble/Imagem1.png",
-        "IMGS/Bubble/Imagem2.png",
-        "IMGS/Bubble/Imagem3.png",
-        "IMGS/Bubble/Imagem4.png",
-        "IMGS/Bubble/Imagem5.png",
-    ],
-    colormorph: [
-        "IMGS/ColorMorph/Imagem1.png",
-        "IMGS/ColorMorph/Imagem2.png",
-        "IMGS/ColorMorph/Imagem3.png",
-    ],
-    cursed: [
-        "IMGS/CursedByRevenge/Imagem1.png",
-        "IMGS/CursedByRevenge/Imagem2.png",
-        "IMGS/CursedByRevenge/Imagem3.png",
-        "IMGS/CursedByRevenge/Imagem4.png",
-        "IMGS/CursedByRevenge/Imagem5.png",
-        "IMGS/CursedByRevenge/Imagem6.png",
-    ]
-};
+document.addEventListener("DOMContentLoaded", () => {
 
-Object.values(imagensPorProjeto).flat().forEach(src => {
-    const img = new Image();
-    img.src = src;
-});
+    const imagensProjetos = {
+        bubble: [
+            "IMGS/Bubble/Imagem1.png",
+            "IMGS/Bubble/Imagem2.png",
+            "IMGS/Bubble/Imagem3.png"
+        ],
+        colormorph: [
+            "IMGS/ColorMorph/Imagem1.png",
+            "IMGS/ColorMorph/Imagem2.png",
+            "IMGS/ColorMorph/Imagem3.png"
+        ]
+    };
 
-// INICIAR SLIDERS
-document.querySelectorAll(".slider").forEach(slider => {
-    const nomeProjeto = slider.dataset.project;
-    const listaImagens = imagensPorProjeto[nomeProjeto];
+    document.querySelectorAll(".slider").forEach(slider => {
+        const nome = slider.dataset.project;
+        const lista = imagensProjetos[nome];
+        if (!lista || lista.length === 0) return;
 
-    if (!listaImagens || listaImagens.length === 0) return;
+        let atual = 0;
+        const img = slider.querySelector("img");
+        const dotsContainer = slider.querySelector(".slider-dots");
 
-    let indiceAtual = 0;
-    const elementoImg = slider.querySelector("img");
-    const botaoProximo = slider.querySelector(".next"); 
-    const botaoAnterior = slider.querySelector(".prev"); 
+        // CRIAR DOTS
+        if (dotsContainer) {
+            lista.forEach((_, i) => {
+                const dot = document.createElement("div");
+                dot.className = "dot" + (i === 0 ? " active" : "");
+                dot.addEventListener("click", () => irPara(i));
+                dotsContainer.appendChild(dot);
+            });
+        }
 
-    // BOTÃO PRÓXIMO
-    if (botaoProximo) {
-        botaoProximo.addEventListener("click", (e) => {
-            e.stopPropagation(); 
-            indiceAtual = (indiceAtual + 1) % listaImagens.length;
-            elementoImg.src = listaImagens[indiceAtual];
-        });
-    }
+        function irPara(index) {
+            atual = index;
+            img.src = lista[atual];
+            if (dotsContainer) {
+                dotsContainer.querySelectorAll(".dot").forEach((d, i) => {
+                    d.classList.toggle("active", i === atual);
+                });
+            }
+        }
 
-    if (botaoAnterior) {
-        botaoAnterior.addEventListener("click", (e) => {
-            e.stopPropagation();
-            indiceAtual = (indiceAtual - 1 + listaImagens.length) % listaImagens.length;
-            elementoImg.src = listaImagens[indiceAtual];
-        });
-    }
+        const next = slider.querySelector(".next");
+        const prev = slider.querySelector(".prev");
+
+        if (next) {
+            next.addEventListener("click", (e) => {
+                e.stopPropagation();
+                irPara((atual + 1) % lista.length);
+            });
+        }
+        if (prev) {
+            prev.addEventListener("click", (e) => {
+                e.stopPropagation();
+                irPara((atual - 1 + lista.length) % lista.length);
+            });
+        }
+    });
 });

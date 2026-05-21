@@ -4,83 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre - Jorge Costa</title>
-
     <link rel="stylesheet" href="CSS/stylesobre.css">
     <link rel="stylesheet" href="CSS/scrollbar.css">
     <link rel="icon" href="IMGS/UI/Favicom.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()" aria-label="Alternar modo claro/escuro"></button>
+    <button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()"></button>
 
-<main class="contentor">
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">JC</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html" class="active">Sobre</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+        </ul>
+    </nav>
 
-    <header>
-        <h1>Sobre Mim</h1>
-    </header>
+    <!-- HEADER DA PÁGINA -->
+    <div class="page-header">
+        <p class="page-label">Quem sou</p>
+        <h1 class="page-title">Sobre Mim</h1>
+    </div>
 
-    <img src="IMGS/Eu.jpg" class="foto-sobre" alt="Jorge Costa - Game Developer e Artista 3D">
+    <!-- LAYOUT PRINCIPAL -->
+    <div class="sobre-layout">
 
-    <section class="bio">
-        <div class="cartao-sobre">
-            <p>
-               Olá! Sou o <strong>Jorge Costa</strong>, tenho 25 anos e sou um entusiasta de desenvolvimento de jogos, 
-               com foco especializado na criação de <strong>assets 3D e ambientes</strong>. Sou especialista em modelação 
-               low e medium poly, texturização e animação de elementos otimizados para motores de jogo.
-            </p>
+        <!-- COLUNA ESQUERDA — foto + links -->
+        <div class="sobre-foto-col reveal">
+            <img src="IMGS/Eu.jpg" class="foto-sobre" alt="Jorge Costa"
+                onerror="this.outerHTML='<div class=foto-placeholder>JC</div>'">
+            <div class="sobre-links">
+                <a href="https://www.artstation.com/jorgecosta31" target="_blank" rel="noopener">
+                    ArtStation <span class="link-seta">→</span>
+                </a>
+                <a href="https://www.linkedin.com/in/jorge-costa-1b7279191/" target="_blank" rel="noopener">
+                    LinkedIn <span class="link-seta">→</span>
+                </a>
+                <a href="mailto:jorge_1616_costa@hotmail.com">
+                    Email <span class="link-seta">→</span>
+                </a>
+            </div>
         </div>
 
-        <div class="cartao-sobre">
-            <p>
-                Ao longo do meu percurso, desenvolvi diversos tipos de assets: 
-                <strong>armas, personagens animadas</strong> e <strong>cenários low poly</strong>. 
-                O meu foco principal é a integração prática e eficiente em motores como <strong>Unreal Engine</strong> e <strong>Unity</strong>.
+        <!-- COLUNA DIREITA — bio + skills + portfólio -->
+        <div class="sobre-bio">
+
+            <h2 class="bio-titulo reveal">Olá, sou o Jorge.</h2>
+
+            <p class="bio-texto reveal">
+                Tenho <strong>25 anos</strong> e sou um entusiasta de desenvolvimento de jogos,
+                com foco especializado na criação de <strong>assets 3D e ambientes</strong>.
+                Sou especialista em modelação <strong>low e medium poly</strong>, texturização
+                e animação de elementos otimizados para motores de jogo.
             </p>
-        </div>
-    </section>
 
-    <hr style="border: 0; height: 1px; background: rgba(255,255,255,0.1); margin: 40px 0;">
+            <p class="bio-texto reveal">
+                Ao longo do meu percurso, desenvolvi diversos tipos de assets:
+                <strong>armas, personagens animadas</strong> e <strong>cenários low poly</strong>.
+                O meu foco principal é a integração prática e eficiente em motores como <strong>Unity</strong> e <strong>Godot</strong>.
+            </p>
 
-    <section class="competencias">
-        <h2>Competências & Portfólio</h2>
+            <div class="divider reveal"></div>
 
-        <div class="grelha-competencias">
-
-            <div class="cartao-competencia slider" data-project="modelacao">
-                <button class="prev" aria-label="Imagem anterior">❮</button>
-                <img src="" alt="Exemplo de Modelação 3D"> <button class="next" aria-label="Próxima imagem">❯</button>
-
-                <div class="conteudo-competencia">
-                    <h3>Modelação 3D</h3>
-                </div>
+            <!-- SKILLS -->
+            <h3 class="skills-titulo reveal">Competências</h3>
+            <div class="skills-grid">
+                <div class="skill-tag reveal"><span class="skill-dot"></span>Unity</div>
+                <div class="skill-tag reveal"><span class="skill-dot"></span>Blender</div>
+                <div class="skill-tag reveal"><span class="skill-dot"></span>Modelação 3D</div>
+                <div class="skill-tag reveal"><span class="skill-dot"></span>Level Design</div>
+                <div class="skill-tag reveal"><span class="skill-dot"></span>UI Design</div>
+                <div class="skill-tag reveal"><span class="skill-dot"></span>Assets 3D</div>
             </div>
 
-            <div class="cartao-competencia slider" data-project="ambientes">
-                <button class="prev" aria-label="Imagem anterior">❮</button>
-                <img src="" alt="Exemplo de Criação de Ambientes"> <button class="next" aria-label="Próxima imagem">❯</button>
+            <div class="divider reveal"></div>
 
-                <div class="conteudo-competencia">
-                    <h3>Criação de Ambientes</h3>
+            <!-- PORTFÓLIO 3D -->
+            <h3 class="skills-titulo reveal">Portfólio 3D</h3>
+
+            <div class="portfolio-card reveal" data-project="modelacao">
+                <div class="portfolio-slider">
+                    <button class="prev" aria-label="Anterior">❮</button>
+                    <img src="IMGS/Skills/RádioLowPoly.png" alt="Modelação 3D">
+                    <button class="next" aria-label="Seguinte">❯</button>
                 </div>
+                <div class="portfolio-label">Modelação 3D</div>
+            </div>
+
+            <div class="portfolio-card reveal" data-project="ambientes">
+                <div class="portfolio-slider">
+                    <button class="prev" aria-label="Anterior">❮</button>
+                    <img src="IMGS/Skills/ParqueDia.png" alt="Criação de Ambientes">
+                    <button class="next" aria-label="Seguinte">❯</button>
+                </div>
+                <div class="portfolio-label">Criação de Ambientes</div>
+            </div>
+
+            <div class="divider reveal"></div>
+
+            <!-- FORMAÇÃO -->
+            <h3 class="skills-titulo reveal">Formação</h3>
+            <div class="formacao-bloco reveal">
+                <p class="formacao-ano">Atual</p>
+                <p class="formacao-curso">Licenciatura em Videojogos</p>
+                <p class="formacao-escola">Universidade Lusófona do Porto</p>
             </div>
 
         </div>
-    </section>
+    </div>
 
-    <footer class="rodape-sobre">
-        <div class="redes-sociais">
-            <a href="https://www.artstation.com/jorgecosta31" target="_blank" rel="noopener">ArtStation</a>
-            <a href="https://www.linkedin.com/in/jorge-costa-1b7279191/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-
-        <a class="botao-voltar" href="index.html">⬅ Voltar</a>
+    <footer class="rodape">
+        <span>© 2025 Jorge Costa</span>
+        <span>Game Developer &amp; 3D Artist</span>
     </footer>
 
-</main>
-
-<script src="JavaScripts/theme.js"></script>
-<script src="JavaScripts/skills.js"></script>
-
+    <script src="JavaScripts/theme.js"></script>
+    <script src="JavaScripts/reveal.js"></script>
+    <script src="JavaScripts/skills.js"></script>
 </body>
 </html>
