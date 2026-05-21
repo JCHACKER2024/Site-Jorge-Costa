@@ -79,6 +79,7 @@ body {
 }
 .nav-links a:hover, .nav-links a.active { color: var(--cor-destaque); }
 
+/* BOTAO TEMA */
 .botao-tema {
     background: transparent;
     border: 1px solid var(--cor-borda);
@@ -165,7 +166,7 @@ body {
         0 0 40px rgba(0,168,150,0.06);
 }
 
-/* FOTO — ocupa toda a altura do card */
+/* FOTO */
 .hero-foto {
     width: 200px;
     height: 100%;
@@ -190,7 +191,7 @@ body {
     flex-shrink: 0;
 }
 
-/* INFO — coluna direita do card */
+/* INFO */
 .hero-info {
     display: flex;
     flex-direction: column;
@@ -239,6 +240,7 @@ body {
     margin-top: 0.4rem;
 }
 
+/* BOTÃO */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -311,26 +313,35 @@ body {
 /* SCROLL HINT */
 .scroll-hint {
     position: absolute;
-    bottom: 2rem; left: 3rem;
+    bottom: 3rem;
+    left: 3.5rem; 
     z-index: 3;
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1.2rem; 
     color: var(--cor-muted);
-    font-size: 0.7rem;
-    letter-spacing: 3px;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    animation: fadeUp 0.6s 0.5s ease both;
+    animation: fadeUp 0.6s 0.5s ease both, pulseScroll 2s infinite ease-in-out 1.5s;
 }
+
 .scroll-line {
-    width: 40px; height: 1px;
-    background: var(--cor-destaque);
+    width: 50px;
+    height: 1px;
+    background: linear-gradient(to right, var(--cor-destaque), transparent); 
     transform-origin: left;
     animation: lineGrow 1.2s 1s ease both;
 }
+
 @keyframes lineGrow {
     from { transform: scaleX(0); }
     to   { transform: scaleX(1); }
+}
+
+@keyframes pulseScroll {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.9; }
 }
 
 /* SKILLS STRIP */
@@ -351,10 +362,12 @@ body {
     animation: skillsScroll 30s linear infinite;
     width: max-content;
 }
+
 @keyframes skillsScroll {
     from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    to   { transform: translateX(-25%); }
 }
+
 .skill-item {
     display: inline-flex;
     align-items: center;
@@ -459,36 +472,61 @@ body {
     font-weight: 300;
 }
 
-/* CONTACTO */
+/* SECÇÃO CONTATOS */
 .seccao-contacto {
-    padding: 6rem 4rem;
+    padding: 6rem 2rem; 
     text-align: center;
     background: rgba(10,10,12,0.5);
     backdrop-filter: blur(8px);
     border-top: 1px solid var(--cor-borda);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .modo-claro .seccao-contacto { background: rgba(244,244,240,0.6); }
 
-.contacto-email {
+.seccao-contacto .seccao-label {
+    margin-bottom: 0.5rem;
+}
+
+.seccao-contacto .seccao-titulo {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(1.2rem, 3vw, 2.2rem);
+    font-size: clamp(3rem, 6vw, 4.5rem); 
     letter-spacing: 3px;
+    line-height: 1.1;
+    margin-bottom: 2rem; 
+}
+
+.contacto-email {
+    font-family: 'DM Sans', sans-serif; 
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-weight: 500;
+    letter-spacing: 1px;
     color: var(--cor-destaque);
     text-decoration: none;
-    display: block;
-    margin: 1.5rem 0;
-    transition: color 0.2s, text-shadow 0.2s;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid rgba(0, 255, 204, 0.15);
+    border-radius: 4px;
+    background: rgba(0, 255, 204, 0.02);
+    transition: all 0.2s ease;
+    margin-bottom: 2.5rem; 
 }
 .contacto-email:hover {
-    color: var(--cor-destaque2);
-    text-shadow: 0 0 20px rgba(0,255,204,0.3);
+    color: #0a0a0c;
+    background: var(--cor-destaque);
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 20px rgba(0,255,204,0.3);
+    transform: translateY(-2px);
 }
+.modo-claro .contacto-email:hover { color: #ffffff; }
+
 .social-links {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 1.5rem;
 }
 .social-links a {
     color: var(--cor-muted);
@@ -497,15 +535,18 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     border: 1px solid var(--cor-borda);
-    padding: 0.55rem 1.2rem;
-    border-radius: 3px;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
     font-weight: 500;
-    transition: all 0.2s;
+    background: rgba(255, 255, 255, 0.01);
+    transition: all 0.2s ease;
 }
 .social-links a:hover {
     color: var(--cor-destaque);
     border-color: var(--cor-destaque);
-    box-shadow: 0 0 12px rgba(0,255,204,0.15);
+    background: rgba(0, 255, 204, 0.04);
+    box-shadow: 0 0 15px rgba(0,255,204,0.1);
+    transform: translateY(-2px);
 }
 
 /* FOOTER */

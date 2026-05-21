@@ -22,14 +22,11 @@
         <button id="botao-alternar-tema" class="botao-tema" onclick="toggleTheme()">LIGHT</button>
     </nav>
 
-    <!-- HERO -->
     <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-grid"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-grid"></div>
 
-    <div class="hero-inner">
-
-            <!-- CARD ESQUERDA -->
+        <div class="hero-inner">
             <div class="hero-card">
                 <img src="IMGS/Eu.jpg" alt="Jorge Costa" class="hero-foto"
                     onerror="this.outerHTML='<div class=\'hero-foto-placeholder\'>JC</div>'">
@@ -44,14 +41,11 @@
                 </div>
             </div>
 
-            <!-- VÍDEO DIREITA -->
             <div class="hero-video-wrap">
-                <!-- <video autoplay muted loop playsinline src="IMGS/UI/intro.mp4"></video> -->
                 <div class="hero-video-placeholder">
                     <span>VÍDEO EM BREVE</span>
                 </div>
             </div>
-
         </div>
 
         <div class="scroll-hint">
@@ -60,27 +54,17 @@
         </div>
     </section>
 
-    <!-- SKILLS STRIP -->
     <div class="skills-strip">
-        <div class="skills-track">
+        <div class="skills-track" id="skills-track">
             <span class="skill-item"><span class="skill-dot"></span>Unity</span>
             <span class="skill-item"><span class="skill-dot"></span>Blender</span>
             <span class="skill-item"><span class="skill-dot"></span>Modelação 3D</span>
-            <span class="skill-item"><span class="skill-dot"></span>Texturização</span>
-            <span class="skill-item"><span class="skill-dot"></span>Level Design</span>
-            <span class="skill-item"><span class="skill-dot"></span>UI Design</span>
-            <span class="skill-item"><span class="skill-dot"></span>HTML / CSS</span>
-            <span class="skill-item"><span class="skill-dot"></span>Unity</span>
-            <span class="skill-item"><span class="skill-dot"></span>Blender</span>
-            <span class="skill-item"><span class="skill-dot"></span>Modelação 3D</span>
-            <span class="skill-item"><span class="skill-dot"></span>Texturização</span>
             <span class="skill-item"><span class="skill-dot"></span>Level Design</span>
             <span class="skill-item"><span class="skill-dot"></span>UI Design</span>
             <span class="skill-item"><span class="skill-dot"></span>HTML / CSS</span>
         </div>
     </div>
 
-    <!-- PROJETOS -->
     <section class="seccao-projetos">
         <p class="seccao-label reveal">Trabalho</p>
         <h2 class="seccao-titulo reveal">Projetos em Destaque</h2>
@@ -117,18 +101,16 @@
                 <div class="projeto-info">
                     <p class="projeto-genre">Em Breve</p>
                     <h3 class="projeto-nome">???</h3>
-                    <p class="projeto-desc">Novo projeto a ser anunciado em breve.</p>
+                    <p class="projeto-desc">Novo projeto a ser anunciou em breve.</p>
                 </div>
             </a>
 
         </div>
     </section>
 
-    <!-- CONTACTO -->
     <section class="seccao-contacto">
-        <p class="seccao-label">Contacto</p>
-        <h2 class="seccao-titulo">Vamos Trabalhar<br>Juntos</h2>
-        <a href="mailto:jorge_1616_costa@hotmail.com" class="contacto-email">jorge_1616_costa@hotmail.com</a>
+        <h2 class="seccao-titulo">Vamos Trabalhar Juntos</h2>
+        <a href="mailto:jorge_1616_costa@hotmail.com" class="contacto-email">Contacto: jorge_1616_costa@hotmail.com</a>
         <div class="social-links">
             <a href="https://www.facebook.com/profile.php?id=100052424652393" target="_blank" rel="noopener">Facebook</a>
             <a href="https://www.linkedin.com/in/jorge-costa-1b7279191/" target="_blank" rel="noopener">LinkedIn</a>
@@ -143,5 +125,14 @@
 
     <script src="JavaScripts/theme.js"></script>
     <script src="JavaScripts/reveal.js"></script>
+
+    <script>
+        const track = document.getElementById('skills-track');
+        if (track) {
+            // Clona o conteúdo original 3 vezes para garantir preenchimento em qualquer ecrã
+            const content = track.innerHTML;
+            track.innerHTML = content + content + content + content;
+        }
+    </script>
 </body>
 </html>
