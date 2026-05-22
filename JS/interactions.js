@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
             "IMGS/ColorMorph/Imagem2.png",
             "IMGS/ColorMorph/Imagem3.png"
         ],
+        lazerconnect: [
+            "IMGS/LazerConnect/Imagem1.png",
+            "IMGS/LazerConnect/Imagem2.png",
+            "IMGS/LazerConnect/Imagem3.png"
+        ],
         modelacao: [
             "IMGS/Skills/RádioLowPoly.png",
             "IMGS/Skills/RádioHighPoly.png"
