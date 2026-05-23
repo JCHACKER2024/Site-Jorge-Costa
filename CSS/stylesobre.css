@@ -263,14 +263,72 @@ body {
 }
 
 /* RESPONSIVO */
+@media (max-width: 1024px) {
+    .sobre-card-principal { grid-template-columns: 280px 1fr; }
+}
+
 @media (max-width: 768px) {
-    .sobre-layout-total { padding: 0 1rem 4rem; }
-    .sobre-conteudo-largo { gap: 3rem; }
+    /* NAVBAR — igual */
+    .navbar {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 0;
+        padding: 0.8rem 1.2rem;
+    }
+    .nav-logo { font-size: 0.85rem; letter-spacing: 1.5px; flex: 1; }
+    .botao-tema { font-size: 0.6rem; padding: 0.3rem 0.7rem; }
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 0.6rem 0;
+        border-top: 1px solid var(--cor-borda);
+        margin-top: 0.4rem;
+    }
+    .nav-links a { font-size: 0.72rem; letter-spacing: 1.5px; }
+
+    /* PAGE HEADER */
+    .page-header { padding: 7rem 1.2rem 1.5rem; }
+    .page-title { font-size: 3rem; }
+
+    /* LAYOUT */
+    .sobre-layout-total { padding: 0 1rem 3rem; }
+    .sobre-conteudo-largo { gap: 2.5rem; }
+
+    /* CARD PRINCIPAL */
     .sobre-card-principal { grid-template-columns: 1fr; }
-    .foto-sobre, .foto-placeholder { height: 280px; border-right: none; border-bottom: 1px solid var(--cor-borda); }
-    .sobre-card-info { padding: 1.8rem; }
+    .foto-sobre, .foto-placeholder {
+        height: 260px;
+        border-right: none;
+        border-bottom: 1px solid var(--cor-borda);
+    }
+    .sobre-card-info { padding: 1.5rem; }
+    .bio-titulo { font-size: 2rem; }
+    .bio-texto { font-size: 1rem; }
+
+    /* SKILLS */
+    .skills-titulo { font-size: 2rem; }
+    .skills-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+    .skill-tag { padding: 0.9rem 1rem; font-size: 0.9rem; }
+
+    /* PORTFÓLIO */
     .portfolio-slider { aspect-ratio: 16/9; }
-    .portfolio-slider button { width: 45px; font-size: 1.2rem; }
-    .skills-grid { grid-template-columns: 1fr; }
+    .portfolio-slider button { width: 40px; font-size: 1.1rem; }
+
+    /* FORMAÇÃO */
+    .formacao-bloco { padding: 1.4rem; }
+    .formacao-curso { font-size: 1.1rem; }
+
+    /* LINKS */
+    .sobre-links-fundo { flex-direction: column; }
     .sobre-links-fundo a { min-width: 100%; }
+
+    /* FOOTER */
+    .rodape {
+        padding: 1.2rem 1.5rem;
+        flex-direction: column;
+        gap: 0.4rem;
+        text-align: center;
+    }
 }
