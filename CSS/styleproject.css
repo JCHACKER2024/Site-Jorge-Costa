@@ -207,18 +207,6 @@
     width: fit-content;
 }
 
-.titulo-projeto::after {
-    content: '↓';
-    font-size: 1.2rem;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    color: var(--cor-destaque);
-    opacity: 0.7;
-}
-
-.titulo-projeto.aberto::after { 
-    transform: rotate(180deg); 
-}
-
 .titulo-projeto:hover { 
     color: var(--cor-destaque); 
 }
@@ -273,6 +261,53 @@
     color: var(--cor-destaque);
 }
 
+/* BOTÕES DO ITCH.IO */
+.projeto-links-wrap {
+    margin-top: 1.5rem;
+    display: flex;
+}
+
+.projeto-links-wrap .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.projeto-links-wrap .btn-primary {
+    background: var(--cor-destaque);
+    color: #0a0a0c !important;
+    border: 1px solid var(--cor-destaque);
+}
+
+.projeto-links-wrap .btn-primary:hover {
+    background: transparent;
+    color: var(--cor-destaque) !important;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+}
+
+.modo-claro .projeto-links-wrap .btn-primary {
+    background: var(--cor-destaque);
+    color: #ffffff !important;
+}
+
+.projeto-links-wrap .btn.disabled {
+    background: transparent;
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-muted) !important;
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 /* RESPONSIVIDADE */
 @media (max-width: 1024px) {
     .projeto,
@@ -291,7 +326,6 @@
 }
 
 @media (max-width: 768px) {
-    /* NAVBAR — igual ao MainPage */
     .navbar {
         height: auto;
         flex-wrap: wrap;
@@ -323,11 +357,15 @@
     .slider { min-height: 200px; aspect-ratio: 16/9; width: 100%; max-width: 100%; }
     .slider button { width: 36px; font-size: 1.1rem; opacity: 1; }
     .slider img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;}
+    
     /* INFO */
     .info-projeto { padding: 1.4rem 1.2rem; }
     .projeto-numero { font-size: 3rem; }
     .titulo-projeto { font-size: 1.6rem; }
     .detalhes p { font-size: 0.82rem; }
+    
+    .projeto-links-wrap { margin-top: 1.2rem; }
+    .projeto-links-wrap .btn { width: 100%; text-align: center; }
 
     /* TAGS */
     .tags { gap: 0.4rem; }
