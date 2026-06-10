@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     // BANCO DE IMAGENS
     const baseImagens = {
         bubble: [
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "IMGS/ColorMorph/Imagem2.png",
             "IMGS/ColorMorph/Imagem3.png"
         ],
-        lazerconnect: [
+        laserconnect: [
             "IMGS/LazerConnect/Imagem1.png",
             "IMGS/LazerConnect/Imagem2.png",
             "IMGS/LazerConnect/Imagem3.png"
@@ -30,17 +30,18 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
     };
 
-    // CONTEÚDO EXPANSÍVEL (ABRIR/FECHAR DETALHES)
+    // ABRIR/FECHAR DETALHES — funciona com e sem slider
     const estadoGuardado = JSON.parse(localStorage.getItem('detalhesProjetos')) || {};
 
     document.querySelectorAll('.titulo-projeto').forEach(titulo => {
         const projetoElemento = titulo.closest('.projeto');
-        const slider = projetoElemento ? projetoElemento.querySelector('.slider') : null;
+        const slider = projetoElemento ? projetoElemento.querySelector('.slider[data-project]') : null;
         const chaveProjeto = slider ? slider.dataset.project : null;
         const detalhes = titulo.nextElementSibling;
 
-        if (!detalhes) return;
+        if (!detalhes || !detalhes.classList.contains('detalhes')) return;
 
+        // RESTAURAR ESTADO GUARDADO
         if (chaveProjeto && estadoGuardado[chaveProjeto]) {
             detalhes.classList.add('show');
             titulo.classList.add('aberto');
@@ -58,12 +59,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // CONTROLO DOS SLIDERS
-    const seletoresSliders = document.querySelectorAll(".slider, .portfolio-card");
-
-    seletoresSliders.forEach(contentorSlider => {
+    document.querySelectorAll(".slider, .portfolio-card").forEach(contentorSlider => {
         const nomeChave = contentorSlider.dataset.project;
         const listaImagens = baseImagens[nomeChave];
-        
+
         if (!listaImagens || listaImagens.length === 0) return;
 
         let indiceAtual = 0;
@@ -72,9 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const botaoNext = contentorSlider.querySelector(".next");
         const botaoPrev = contentorSlider.querySelector(".prev");
 
-        if (imgElemento) {
-            imgElemento.src = listaImagens[0];
-        }
+        if (imgElemento) imgElemento.src = listaImagens[0];
 
         if (dotsContainer) {
             listaImagens.forEach((_, i) => {
@@ -87,10 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function irParaSlide(index) {
             indiceAtual = index;
-            if (imgElemento) {
-                imgElemento.src = listaImagens[indiceAtual];
-            }
-            
+            if (imgElemento) imgElemento.src = listaImagens[indiceAtual];
             if (dotsContainer) {
                 dotsContainer.querySelectorAll(".dot").forEach((dot, i) => {
                     dot.classList.toggle("active", i === indiceAtual);
@@ -113,45 +107,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // EFEITO HOVER NOS VÍDEOS
-    const videosPreview = document.querySelectorAll('.card-video, .projeto-video, video[muted]');
-
-    videosPreview.forEach(video => {
+    // HOVER NOS VÍDEOS
+    document.querySelectorAll('.projeto-video, video[muted]').forEach(video => {
         video.muted = true;
-        const zonaHover = video.closest('.portfolio-card, .card, .projeto, .projeto-card') || video;
-
-        // Procura se o card tem um placeholder de texto ("Em Breve", etc.)
-        const placeholderTexto = zonaHover.querySelector('.projeto-img-placeholder');
-        let textoOriginal = "";
+        const zonaHover = video.closest('.projeto-card, .projeto') || video;
 
         zonaHover.addEventListener('mouseenter', () => {
-            // 1. Teste para quando usares vídeos reais (vês o log na consola do F12)
-            console.log("Rato entrou! Ativar simulação de vídeo para:", zonaHover.querySelector('.projeto-nome')?.textContent || "Card");
-
-            // 2. Teste Visual Imediato no ecrã (muda o texto do placeholder)
-            if (placeholderTexto) {
-                textoOriginal = placeholderTexto.textContent;
-                placeholderTexto.textContent = "▶ VÍDEO A FUNCIONAR!";
-                placeholderTexto.style.background = "linear-gradient(135deg, #00ffcc, #00a896)";
-                placeholderTexto.style.color = "#050505";
-            }
-            
-            // Tenta dar play no elemento de vídeo nativo
-            video.play().catch(err => {});
+            video.play().catch(() => {});
         });
 
         zonaHover.addEventListener('mouseleave', () => {
-            console.log("Rato saiu! Parar simulação.");
-
-            // Restaura o estado visual original quando o rato sai
-            if (placeholderTexto) {
-                placeholderTexto.textContent = textoOriginal;
-                placeholderTexto.style.background = "";
-                placeholderTexto.style.color = "";
-            }
-
             video.pause();
             video.currentTime = 0;
         });
     });
+
 });
