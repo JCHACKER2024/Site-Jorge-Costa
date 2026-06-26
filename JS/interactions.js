@@ -9,11 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "IMGS/Bubble/Imagem4.png",
             "IMGS/Bubble/Imagem5.png"
         ],
-        colormorph: [
-            "IMGS/ColorMorph/Imagem1.png",
-            "IMGS/ColorMorph/Imagem2.png",
-            "IMGS/ColorMorph/Imagem3.png"
-        ],
         laserconnect: [
             "IMGS/LazerConnect/Imagem1.png",
             "IMGS/LazerConnect/Imagem2.png",
