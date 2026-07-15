@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
             "IMGS/Bubble/Imagem5.png"
         ],
         laserconnect: [
-            "IMGS/LazerConnect/Imagem1.png",
-            "IMGS/LazerConnect/Imagem2.png",
-            "IMGS/LazerConnect/Imagem3.png"
+            "IMGS/LaserConnect/Imagem1.png",
+            "IMGS/LaserConnect/Imagem2.png",
+            "IMGS/LaserConnect/Imagem3.png"
         ],
         modelacao: [
             "IMGS/Skills/RádioLowPoly.png",
